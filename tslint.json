@@ -38,6 +38,7 @@
     "one-variable-per-declaration": [false],
     "only-arrow-functions": [true, "allow-declarations"],
     "ordered-imports": [false],
+    "prefer-array-literal": [true, { "allow-type-parameters": true }],
     "prefer-method-signature": false,
     "prefer-template": [true, "allow-single-concat"],
     "quotemark": [true, "single", "jsx-double"],
