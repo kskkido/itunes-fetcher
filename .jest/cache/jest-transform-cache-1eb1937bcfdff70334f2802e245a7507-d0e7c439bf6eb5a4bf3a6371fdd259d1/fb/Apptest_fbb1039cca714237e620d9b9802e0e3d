@@ -1,0 +1,14 @@
+8cef6075c263853f12958538912b0ad3
+"use strict";var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");var _react = _interopRequireDefault(require("react"));
+var _reactTestRenderer = _interopRequireDefault(require("react-test-renderer"));
+var _ = _interopRequireDefault(require("../"));var _jsxFileName = "/Users/keisukekido/projects/itunesFetcher/src/containers/App/_tests/App.test.tsx";
+
+var setup = function setup() {return {
+    tree: _reactTestRenderer.default.create(_react.default.createElement(_.default, { __source: { fileName: _jsxFileName, lineNumber: 6 } })) };};
+
+
+describe('app', function () {
+  it('should render as expected', function () {
+    expect(setup().tree.toJSON()).toMatchSnapshot();
+  });
+});

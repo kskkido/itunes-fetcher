@@ -1,0 +1,101 @@
+53fb0009dcc3a6a0ff6002800c187e5c
+"use strict";var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _react = _interopRequireDefault(require("react"));
+var _reactNative = require("react-native");
+
+
+
+
+
+
+
+var _NewAppScreen = require("react-native/Libraries/NewAppScreen");var _jsxFileName = "/Users/keisukekido/projects/itunesFetcher/src/containers/App/index.tsx";
+
+
+
+
+
+
+
+var App = function App() {
+  return (
+    _react.default.createElement(_react.default.Fragment, null,
+    _react.default.createElement(_reactNative.StatusBar, { barStyle: "dark-content", __source: { fileName: _jsxFileName, lineNumber: 21 } }),
+    _react.default.createElement(_reactNative.SafeAreaView, { __source: { fileName: _jsxFileName, lineNumber: 22 } },
+    _react.default.createElement(_reactNative.ScrollView, {
+      contentInsetAdjustmentBehavior: "automatic",
+      style: styles.scrollView, __source: { fileName: _jsxFileName, lineNumber: 23 } },
+    _react.default.createElement(_NewAppScreen.Header, { __source: { fileName: _jsxFileName, lineNumber: 26 } }),
+    _react.default.createElement(_reactNative.View, { style: styles.body, __source: { fileName: _jsxFileName, lineNumber: 27 } },
+    _react.default.createElement(_reactNative.View, { style: styles.sectionContainer, __source: { fileName: _jsxFileName, lineNumber: 28 } },
+    _react.default.createElement(_reactNative.Text, { style: styles.sectionTitle, __source: { fileName: _jsxFileName, lineNumber: 29 } }, "Step One"),
+    _react.default.createElement(_reactNative.Text, { style: styles.sectionDescription, __source: { fileName: _jsxFileName, lineNumber: 30 } }, "Edit ",
+    _react.default.createElement(_reactNative.Text, { style: styles.highlight, __source: { fileName: _jsxFileName, lineNumber: 31 } }, "App.js"), " to change this screen and then come back to see your edits.")),
+
+
+
+    _react.default.createElement(_reactNative.View, { style: styles.sectionContainer, __source: { fileName: _jsxFileName, lineNumber: 35 } },
+    _react.default.createElement(_reactNative.Text, { style: styles.sectionTitle, __source: { fileName: _jsxFileName, lineNumber: 36 } }, "See Your Changes"),
+    _react.default.createElement(_reactNative.Text, { style: styles.sectionDescription, __source: { fileName: _jsxFileName, lineNumber: 37 } },
+    _react.default.createElement(_NewAppScreen.ReloadInstructions, { __source: { fileName: _jsxFileName, lineNumber: 38 } }))),
+
+
+    _react.default.createElement(_reactNative.View, { style: styles.sectionContainer, __source: { fileName: _jsxFileName, lineNumber: 41 } },
+    _react.default.createElement(_reactNative.Text, { style: styles.sectionTitle, __source: { fileName: _jsxFileName, lineNumber: 42 } }, "Debug"),
+    _react.default.createElement(_reactNative.Text, { style: styles.sectionDescription, __source: { fileName: _jsxFileName, lineNumber: 43 } },
+    _react.default.createElement(_NewAppScreen.DebugInstructions, { __source: { fileName: _jsxFileName, lineNumber: 44 } }))),
+
+
+    _react.default.createElement(_reactNative.View, { style: styles.sectionContainer, __source: { fileName: _jsxFileName, lineNumber: 47 } },
+    _react.default.createElement(_reactNative.Text, { style: styles.sectionTitle, __source: { fileName: _jsxFileName, lineNumber: 48 } }, "Learn More"),
+    _react.default.createElement(_reactNative.Text, { style: styles.sectionDescription, __source: { fileName: _jsxFileName, lineNumber: 49 } }, "Read the docs to discover what to do next:")),
+
+
+
+    _react.default.createElement(_NewAppScreen.LearnMoreLinks, { __source: { fileName: _jsxFileName, lineNumber: 53 } }))))));
+
+
+
+
+
+};
+
+var styles = _reactNative.StyleSheet.create({
+  scrollView: {
+    backgroundColor: _NewAppScreen.Colors.lighter },
+
+  engine: {
+    position: 'absolute',
+    right: 0 },
+
+  body: {
+    backgroundColor: _NewAppScreen.Colors.white },
+
+  sectionContainer: {
+    marginTop: 32,
+    paddingHorizontal: 24 },
+
+  sectionTitle: {
+    fontSize: 24,
+    fontWeight: '600',
+    color: _NewAppScreen.Colors.black },
+
+  sectionDescription: {
+    marginTop: 8,
+    fontSize: 18,
+    fontWeight: '400',
+    color: _NewAppScreen.Colors.dark },
+
+  highlight: {
+    fontWeight: '700' },
+
+  footer: {
+    color: _NewAppScreen.Colors.dark,
+    fontSize: 12,
+    fontWeight: '600',
+    padding: 4,
+    paddingRight: 12,
+    textAlign: 'right' } });var _default =
+
+
+
+App;exports.default = _default;

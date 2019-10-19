@@ -1,0 +1,497 @@
+bb4ac8440a84981f5729f7967052fd47
+
+
+
+
+
+
+
+
+
+
+'use strict';var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
+
+
+
+
+
+var _NativeStatusBarManager = _interopRequireDefault(require("./NativeStatusBarManager"));var _NativeStatusBarManag;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function mergePropsStack(
+propsStack,
+defaultValues)
+{
+  return propsStack.reduce(function (prev, cur) {
+    for (var prop in cur) {
+      if (cur[prop] != null) {
+        prev[prop] = cur[prop];
+      }
+    }
+    return prev;
+  }, (0, _extends2.default)({}, defaultValues));
+}
+
+
+
+
+
+function createStackEntry(props) {
+  return {
+    backgroundColor:
+    props.backgroundColor != null ?
+    {
+      value: props.backgroundColor,
+      animated: props.animated } :
+
+    null,
+    barStyle:
+    props.barStyle != null ?
+    {
+      value: props.barStyle,
+      animated: props.animated } :
+
+    null,
+    translucent: props.translucent,
+    hidden:
+    props.hidden != null ?
+    {
+      value: props.hidden,
+      animated: props.animated,
+      transition: props.showHideTransition } :
+
+    null,
+    networkActivityIndicatorVisible: props.networkActivityIndicatorVisible };
+
+}var
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+StatusBar = function (_React$Component) {(0, _inherits2.default)(StatusBar, _React$Component);function StatusBar() {var _getPrototypeOf2;var _this;(0, _classCallCheck2.default)(this, StatusBar);for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {args[_key] = arguments[_key];}_this = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf2 = (0, _getPrototypeOf2.default)(StatusBar)).call.apply(_getPrototypeOf2, [this].concat(args)));_this.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    _stackEntry = null;return _this;}(0, _createClass2.default)(StatusBar, [{ key: "componentDidMount", value: function componentDidMount()
+
+    {
+
+
+
+
+      this._stackEntry = StatusBar.pushStackEntry(this.props);
+    } }, { key: "componentWillUnmount", value: function componentWillUnmount()
+
+    {
+
+
+      StatusBar.popStackEntry(this._stackEntry);
+    } }, { key: "componentDidUpdate", value: function componentDidUpdate()
+
+    {
+      this._stackEntry = StatusBar.replaceStackEntry(
+      this._stackEntry,
+      this.props);
+
+    } }, { key: "render", value: function render()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {
+      return null;
+    } }], [{ key: "setHidden", value: function setHidden(hidden, animation) {animation = animation || 'none';StatusBar._defaultProps.hidden.value = hidden;if (require("../../Utilities/Platform").OS === 'ios') {_NativeStatusBarManager.default.setHidden(hidden, animation);} else if (require("../../Utilities/Platform").OS === 'android') {_NativeStatusBarManager.default.setHidden(hidden);}} }, { key: "setBarStyle", value: function setBarStyle(style, animated) {animated = animated || false;StatusBar._defaultProps.barStyle.value = style;if (require("../../Utilities/Platform").OS === 'ios') {_NativeStatusBarManager.default.setStyle(style, animated);} else if (require("../../Utilities/Platform").OS === 'android') {_NativeStatusBarManager.default.setStyle(style);}} }, { key: "setNetworkActivityIndicatorVisible", value: function setNetworkActivityIndicatorVisible(visible) {if (require("../../Utilities/Platform").OS !== 'ios') {console.warn('`setNetworkActivityIndicatorVisible` is only available on iOS');return;}StatusBar._defaultProps.networkActivityIndicatorVisible = visible;_NativeStatusBarManager.default.setNetworkActivityIndicatorVisible(visible);} }, { key: "setBackgroundColor", value: function setBackgroundColor(color, animated) {if (require("../../Utilities/Platform").OS !== 'android') {console.warn('`setBackgroundColor` is only available on Android');return;}animated = animated || false;StatusBar._defaultProps.backgroundColor.value = color;var processedColor = require("../../StyleSheet/processColor")(color);if (processedColor == null) {console.warn("`StatusBar.setBackgroundColor`: Color " + color + " parsed to null or undefined");return;}_NativeStatusBarManager.default.setColor(processedColor, animated);} }, { key: "setTranslucent", value: function setTranslucent(translucent) {if (require("../../Utilities/Platform").OS !== 'android') {console.warn('`setTranslucent` is only available on Android');return;}StatusBar._defaultProps.translucent = translucent;_NativeStatusBarManager.default.setTranslucent(translucent);} }, { key: "pushStackEntry", value: function pushStackEntry(props) {var entry = createStackEntry(props);StatusBar._propsStack.push(entry);StatusBar._updatePropsStack();return entry;} }, { key: "popStackEntry", value: function popStackEntry(entry) {var index = StatusBar._propsStack.indexOf(entry);if (index !== -1) {StatusBar._propsStack.splice(index, 1);}StatusBar._updatePropsStack();} }, { key: "replaceStackEntry", value: function replaceStackEntry(entry, props) {var newEntry = createStackEntry(props);var index = StatusBar._propsStack.indexOf(entry);if (index !== -1) {StatusBar._propsStack[index] = newEntry;}StatusBar._updatePropsStack();return newEntry;} }]);return StatusBar;}(require('react').Component);StatusBar._propsStack = [];StatusBar._defaultProps = createStackEntry({ animated: false, showHideTransition: 'fade', backgroundColor: require("../../Utilities/Platform").select({ android: (_NativeStatusBarManag = _NativeStatusBarManager.default.getConstants().DEFAULT_BACKGROUND_COLOR) != null ? _NativeStatusBarManag : 'black', ios: 'black' }), barStyle: 'default', translucent: false, hidden: false, networkActivityIndicatorVisible: false });StatusBar._updateImmediate = null;StatusBar._currentValues = null;StatusBar.currentHeight = _NativeStatusBarManager.default.getConstants().HEIGHT;StatusBar.defaultProps = { animated: false, showHideTransition: 'fade' };StatusBar._updatePropsStack = function () {clearImmediate(StatusBar._updateImmediate);StatusBar._updateImmediate = setImmediate(function () {var oldProps = StatusBar._currentValues;var mergedProps = mergePropsStack(StatusBar._propsStack, StatusBar._defaultProps);if (require("../../Utilities/Platform").OS === 'ios') {if (!oldProps || oldProps.barStyle.value !== mergedProps.barStyle.value) {_NativeStatusBarManager.default.setStyle(mergedProps.barStyle.value, mergedProps.barStyle.animated || false);}if (!oldProps || oldProps.hidden.value !== mergedProps.hidden.value) {_NativeStatusBarManager.default.setHidden(mergedProps.hidden.value, mergedProps.hidden.animated ? mergedProps.hidden.transition : 'none');}if (!oldProps || oldProps.networkActivityIndicatorVisible !== mergedProps.networkActivityIndicatorVisible) {_NativeStatusBarManager.default.setNetworkActivityIndicatorVisible(mergedProps.networkActivityIndicatorVisible);}} else if (require("../../Utilities/Platform").OS === 'android') {if (!oldProps || oldProps.barStyle.value !== mergedProps.barStyle.value) {_NativeStatusBarManager.default.setStyle(mergedProps.barStyle.value);}if (!oldProps || oldProps.backgroundColor.value !== mergedProps.backgroundColor.value) {var processedColor = require("../../StyleSheet/processColor")(mergedProps.backgroundColor.value);if (processedColor == null) {console.warn("`StatusBar._updatePropsStack`: Color " + mergedProps.backgroundColor.value + " parsed to null or undefined");} else {_NativeStatusBarManager.default.setColor(processedColor, mergedProps.backgroundColor.animated);}}if (!oldProps || oldProps.hidden.value !== mergedProps.hidden.value) {_NativeStatusBarManager.default.setHidden(mergedProps.hidden.value);}if (!oldProps || oldProps.translucent !== mergedProps.translucent) {_NativeStatusBarManager.default.setTranslucent(mergedProps.translucent);}}StatusBar._currentValues = mergedProps;});};
+
+
+module.exports = StatusBar;

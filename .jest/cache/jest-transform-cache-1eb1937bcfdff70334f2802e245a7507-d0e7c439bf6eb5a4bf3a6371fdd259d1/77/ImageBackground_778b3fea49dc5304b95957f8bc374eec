@@ -1,0 +1,90 @@
+41fa723ec303cff929137128e5c44f41
+
+
+
+
+
+
+
+
+
+'use strict';var _jsxFileName = "/Users/keisukekido/projects/itunesFetcher/node_modules/react-native/Libraries/Image/ImageBackground.js";var
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ImageBackground = function (_React$Component) {require("@babel/runtime/helpers/inherits")(ImageBackground, _React$Component);function ImageBackground() {var _getPrototypeOf2;var _this;require("@babel/runtime/helpers/classCallCheck")(this, ImageBackground);for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {args[_key] = arguments[_key];}_this = require("@babel/runtime/helpers/possibleConstructorReturn")(this, (_getPrototypeOf2 = require("@babel/runtime/helpers/getPrototypeOf")(ImageBackground)).call.apply(_getPrototypeOf2, [this].concat(args)));_this.
+
+
+
+
+
+
+
+
+    _viewRef = null;_this.
+
+    _captureRef = function (ref) {
+      _this._viewRef = ref;
+    };return _this;}require("@babel/runtime/helpers/createClass")(ImageBackground, [{ key: "setNativeProps", value: function setNativeProps(props) {var viewRef = this._viewRef;if (viewRef) {viewRef.setNativeProps(props);}} }, { key: "render", value: function render()
+
+    {var _this$props =
+      this.props,children = _this$props.children,style = _this$props.style,imageStyle = _this$props.imageStyle,imageRef = _this$props.imageRef,props = require("@babel/runtime/helpers/objectWithoutProperties")(_this$props, ["children", "style", "imageStyle", "imageRef"]);
+
+      return (
+        require('react').createElement(require("../Components/View/View"), {
+          accessibilityIgnoresInvertColors: true,
+          style: style,
+          ref: this._captureRef, __source: { fileName: _jsxFileName, lineNumber: 60 } },
+        require('react').createElement(require("./Image"), require("@babel/runtime/helpers/extends")({},
+        props, {
+          style: [
+          require("../StyleSheet/StyleSheet").absoluteFill,
+          {
+
+
+
+
+
+
+
+            width: style.width,
+            height: style.height },
+
+          imageStyle],
+
+          ref: imageRef, __source: { fileName: _jsxFileName, lineNumber: 64 } })),
+
+        children));
+
+
+    } }]);return ImageBackground;}(require('react').Component);
+
+
+module.exports = ImageBackground;

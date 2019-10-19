@@ -1,0 +1,162 @@
+86c2c5cdfc68df9e362dd6313b25342b
+
+
+
+
+
+
+
+
+
+
+'use strict';var
+
+
+
+SyntheticError = function (_Error) {require("@babel/runtime/helpers/inherits")(SyntheticError, _Error);function SyntheticError() {var _getPrototypeOf2;var _this;require("@babel/runtime/helpers/classCallCheck")(this, SyntheticError);for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {args[_key] = arguments[_key];}_this = require("@babel/runtime/helpers/possibleConstructorReturn")(this, (_getPrototypeOf2 = require("@babel/runtime/helpers/getPrototypeOf")(SyntheticError)).call.apply(_getPrototypeOf2, [this].concat(args)));_this.
+    name = '';return _this;}return SyntheticError;}(require("@babel/runtime/helpers/wrapNativeSuper")(Error));
+
+
+
+
+
+var exceptionID = 0;
+function reportException(e, isFatal) {
+  var NativeExceptionsManager = require("./NativeExceptionsManager").default;
+  if (NativeExceptionsManager) {
+    var parseErrorStack = require("./Devtools/parseErrorStack");
+    var stack = parseErrorStack(e);
+    var currentExceptionID = ++exceptionID;
+    var originalMessage = e.message || '';
+    var message = originalMessage;
+    if (e.componentStack != null) {
+      message += "\n\nThis error is located at:" + e.componentStack;
+    }
+    var namePrefix = e.name == null || e.name === '' ? '' : e.name + ": ";
+    var isFromConsoleError = e.name === 'console.error';
+
+    if (!message.startsWith(namePrefix)) {
+      message = namePrefix + message;
+    }
+
+
+    if (!isFromConsoleError) {
+      if (console._errorOriginal) {
+        console._errorOriginal(message);
+      } else {
+        console.error(message);
+      }
+    }
+
+    message =
+    e.jsEngine == null ? message : message + ", js engine: " + e.jsEngine;
+    NativeExceptionsManager.reportException({
+      message: message,
+      originalMessage: message === originalMessage ? null : originalMessage,
+      name: e.name == null || e.name === '' ? null : e.name,
+      componentStack:
+      typeof e.componentStack === 'string' ? e.componentStack : null,
+      stack: stack,
+      id: currentExceptionID,
+      isFatal: isFatal,
+      extraData: {
+        jsEngine: e.jsEngine,
+        rawStack: e.stack,
+        framesPopped: e.framesToPop } });
+
+
+    if (__DEV__) {
+      if (e.preventSymbolication === true) {
+        return;
+      }
+      var symbolicateStackTrace = require("./Devtools/symbolicateStackTrace");
+      symbolicateStackTrace(stack).
+      then(function (prettyStack) {
+        if (prettyStack) {
+          var stackWithoutCollapsedFrames = prettyStack.filter(
+          function (frame) {return !frame.collapse;});
+
+          NativeExceptionsManager.updateExceptionMessage(
+          message,
+          stackWithoutCollapsedFrames,
+          currentExceptionID);
+
+        } else {
+          throw new Error('The stack is null');
+        }
+      }).
+      catch(function (error) {
+        console.log('Unable to symbolicate stack trace: ' + error.message);
+      });
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+function handleException(e, isFatal) {
+  var error;
+  if (e instanceof Error) {
+    error = e;
+  } else {
+
+
+
+
+    error = new SyntheticError(e);
+  }
+  reportException(error, isFatal);
+}
+
+function reactConsoleErrorHandler() {
+  if (!console.reportErrorsAsExceptions) {
+    console._errorOriginal.apply(console, arguments);
+    return;
+  }
+
+  if (arguments[0] && arguments[0].stack) {
+
+    reportException(arguments[0], false);
+  } else {
+    console._errorOriginal.apply(console, arguments);
+    var stringifySafe = require("../Utilities/stringifySafe");
+    var str = Array.prototype.map.call(arguments, stringifySafe).join(', ');
+    if (str.slice(0, 10) === '"Warning: ') {
+
+
+
+      return;
+    }
+    var _error = new SyntheticError(str);
+    _error.name = 'console.error';
+    _error.framesToPop = (_error.framesToPop || 0) + 1;
+    reportException(_error, false);
+  }
+}
+
+
+
+
+
+function installConsoleErrorReporter() {
+
+  if (console._errorOriginal) {
+    return;
+  }
+
+  console._errorOriginal = console.error.bind(console);
+  console.error = reactConsoleErrorHandler;
+  if (console.reportErrorsAsExceptions === undefined) {
+
+
+    console.reportErrorsAsExceptions = true;
+  }
+}
+
+module.exports = { handleException: handleException, installConsoleErrorReporter: installConsoleErrorReporter, SyntheticError: SyntheticError };

@@ -1,0 +1,39 @@
+110638bd63f91c06caaaee2ce339b07f
+"use strict";var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+
+
+
+
+
+
+
+
+
+
+var _reactNative = require("react-native");
+var _react = _interopRequireDefault(require("react"));var _jsxFileName = "/Users/keisukekido/projects/itunesFetcher/node_modules/react-native/Libraries/NewAppScreen/components/DebugInstructions.js";
+
+var styles = _reactNative.StyleSheet.create({
+  highlight: {
+    fontWeight: '700' } });
+
+
+
+var DebugInstructions = _reactNative.Platform.select({
+  ios: function ios() {return (
+      _react.default.createElement(_reactNative.Text, { __source: { fileName: _jsxFileName, lineNumber: 23 } }, "Press ",
+      _react.default.createElement(_reactNative.Text, { style: styles.highlight, __source: { fileName: _jsxFileName, lineNumber: 24 } }, "Cmd + D"), " in the simulator or", ' ',
+      _react.default.createElement(_reactNative.Text, { style: styles.highlight, __source: { fileName: _jsxFileName, lineNumber: 25 } }, "Shake"), " your device to open the React Native debug menu."));},
+
+
+
+  default: function _default() {return (
+      _react.default.createElement(_reactNative.Text, { __source: { fileName: _jsxFileName, lineNumber: 30 } }, "Press ",
+      _react.default.createElement(_reactNative.Text, { style: styles.highlight, __source: { fileName: _jsxFileName, lineNumber: 31 } }, "Cmd or Ctrl + M"), " or", ' ',
+      _react.default.createElement(_reactNative.Text, { style: styles.highlight, __source: { fileName: _jsxFileName, lineNumber: 32 } }, "Shake"), " your device to open the React Native debug menu."));} });var _default =
+
+
+
+
+
+DebugInstructions;exports.default = _default;

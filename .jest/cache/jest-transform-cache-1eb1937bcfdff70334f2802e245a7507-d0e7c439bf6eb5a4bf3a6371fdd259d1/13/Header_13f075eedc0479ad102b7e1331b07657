@@ -1,0 +1,56 @@
+1fd2c62f32810b7a940c82df8843adfd
+
+
+
+
+
+
+
+
+
+
+'use strict';var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+var _Colors = _interopRequireDefault(require("./Colors"));
+
+var _reactNative = require("react-native");
+var _react = _interopRequireDefault(require("react"));var _jsxFileName = "/Users/keisukekido/projects/itunesFetcher/node_modules/react-native/Libraries/NewAppScreen/components/Header.js";
+
+var Header = function Header() {return (
+    _react.default.createElement(_reactNative.ImageBackground, {
+      accessibilityRole: 'image',
+      source: require("./logo.png"),
+      style: styles.background,
+      imageStyle: styles.logo, __source: { fileName: _jsxFileName, lineNumber: 18 } },
+    _react.default.createElement(_reactNative.Text, { style: styles.text, __source: { fileName: _jsxFileName, lineNumber: 23 } }, "Welcome to React")));};
+
+
+
+var styles = _reactNative.StyleSheet.create({
+  background: {
+    paddingBottom: 40,
+    paddingTop: 96,
+    paddingHorizontal: 32,
+    backgroundColor: _Colors.default.lighter },
+
+  logo: {
+    opacity: 0.2,
+    overflow: 'visible',
+    resizeMode: 'cover',
+
+
+
+
+
+
+    marginLeft: -128,
+    marginBottom: -192 },
+
+  text: {
+    fontSize: 40,
+    fontWeight: '600',
+    textAlign: 'center',
+    color: _Colors.default.black } });var _default =
+
+
+
+Header;exports.default = _default;

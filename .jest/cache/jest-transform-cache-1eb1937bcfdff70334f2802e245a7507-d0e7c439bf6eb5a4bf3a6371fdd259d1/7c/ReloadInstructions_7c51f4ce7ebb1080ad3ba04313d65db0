@@ -1,0 +1,37 @@
+7108192775fa9a8726495b9b957a9523
+"use strict";var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+
+
+
+
+
+
+
+
+
+
+var _reactNative = require("react-native");
+var _react = _interopRequireDefault(require("react"));var _jsxFileName = "/Users/keisukekido/projects/itunesFetcher/node_modules/react-native/Libraries/NewAppScreen/components/ReloadInstructions.js";
+
+var styles = _reactNative.StyleSheet.create({
+  highlight: {
+    fontWeight: '700' } });
+
+
+
+var ReloadInstructions = _reactNative.Platform.select({
+  ios: function ios() {return (
+      _react.default.createElement(_reactNative.Text, { __source: { fileName: _jsxFileName, lineNumber: 23 } }, "Press ",
+      _react.default.createElement(_reactNative.Text, { style: styles.highlight, __source: { fileName: _jsxFileName, lineNumber: 24 } }, "Cmd + R"), " in the simulator to reload your app's code."));},
+
+
+
+  default: function _default() {return (
+      _react.default.createElement(_reactNative.Text, { __source: { fileName: _jsxFileName, lineNumber: 29 } }, "Double tap ",
+      _react.default.createElement(_reactNative.Text, { style: styles.highlight, __source: { fileName: _jsxFileName, lineNumber: 30 } }, "R"), " on your keyboard to reload your app's code."));} });var _default =
+
+
+
+
+
+ReloadInstructions;exports.default = _default;

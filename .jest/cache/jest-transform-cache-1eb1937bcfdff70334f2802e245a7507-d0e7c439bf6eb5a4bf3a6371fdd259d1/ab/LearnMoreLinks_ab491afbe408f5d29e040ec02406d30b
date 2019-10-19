@@ -1,0 +1,116 @@
+0bf6aca8cd4651ca6f80bf674f51a2d4
+
+
+
+
+
+
+
+
+
+
+'use strict';var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+var _Colors = _interopRequireDefault(require("./Colors"));
+
+var _openURLInBrowser = _interopRequireDefault(require("react-native/Libraries/Core/Devtools/openURLInBrowser"));
+var _reactNative = require("react-native");
+var _react = _interopRequireDefault(require("react"));var _jsxFileName = "/Users/keisukekido/projects/itunesFetcher/node_modules/react-native/Libraries/NewAppScreen/components/LearnMoreLinks.js";
+
+var links = [
+{
+  title: 'The Basics',
+  link: 'https://facebook.github.io/react-native/docs/tutorial',
+  description: 'Explains a Hello World for React Native.' },
+
+{
+  title: 'Style',
+  link: 'https://facebook.github.io/react-native/docs/style',
+  description:
+  'Covers how to use the prop named style which controls the visuals.' },
+
+{
+  title: 'Layout',
+  link: 'https://facebook.github.io/react-native/docs/flexbox',
+  description: 'React Native uses flexbox for layout, learn how it works.' },
+
+{
+  title: 'Components',
+  link: 'https://facebook.github.io/react-native/docs/components-and-apis',
+  description: 'The full list of components and APIs inside React Native.' },
+
+{
+  title: 'Navigation',
+  link: 'https://facebook.github.io/react-native/docs/navigation',
+  description:
+  'How to handle moving between screens inside your application.' },
+
+{
+  title: 'Networking',
+  link: 'https://facebook.github.io/react-native/docs/network',
+  description: 'How to use the Fetch API in React Native.' },
+
+{
+  title: 'Help',
+  link: 'https://facebook.github.io/react-native/help',
+  description:
+  'Need more help? There are many other React Native developers who may have the answer.' },
+
+{
+  title: 'Follow us on Twitter',
+  link: 'https://twitter.com/reactnative',
+  description:
+  'Stay in touch with the community, join in on Q&As and more by following React Native on Twitter.' }];
+
+
+
+var LinkList = function LinkList() {return (
+    _react.default.createElement(_reactNative.View, { style: styles.container, __source: { fileName: _jsxFileName, lineNumber: 66 } },
+    links.map(function (item, index) {
+      return (
+        _react.default.createElement(_react.default.Fragment, { key: index, __source: { fileName: _jsxFileName, lineNumber: 69 } },
+        _react.default.createElement(_reactNative.View, { style: styles.separator, __source: { fileName: _jsxFileName, lineNumber: 70 } }),
+        _react.default.createElement(_reactNative.TouchableOpacity, {
+          accessibilityRole: 'button',
+          onPress: function onPress() {return (0, _openURLInBrowser.default)(item.link);},
+          style: styles.linkContainer, __source: { fileName: _jsxFileName, lineNumber: 71 } },
+        _react.default.createElement(_reactNative.Text, { style: styles.link, __source: { fileName: _jsxFileName, lineNumber: 75 } }, item.title),
+        _react.default.createElement(_reactNative.Text, { style: styles.description, __source: { fileName: _jsxFileName, lineNumber: 76 } }, item.description))));
+
+
+
+    })));};
+
+
+
+var styles = _reactNative.StyleSheet.create({
+  container: {
+    marginTop: 32,
+    paddingHorizontal: 24 },
+
+  linkContainer: {
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingVertical: 8 },
+
+  link: {
+    flex: 2,
+    fontSize: 18,
+    fontWeight: '400',
+    color: _Colors.default.primary },
+
+  description: {
+    flex: 3,
+    paddingVertical: 16,
+    fontWeight: '400',
+    fontSize: 18,
+    color: _Colors.default.dark },
+
+  separator: {
+    backgroundColor: _Colors.default.light,
+    height: 1 } });var _default =
+
+
+
+LinkList;exports.default = _default;

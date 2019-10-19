@@ -1,0 +1,28 @@
+322b40bd25652466f12eb673b623c449
+
+
+
+
+
+
+
+
+
+
+'use strict';var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+
+
+
+
+var _codegenNativeComponent = _interopRequireDefault(require("../../Utilities/codegenNativeComponent"));var _default =
+
+
+
+
+
+
+
+
+
+(0, _codegenNativeComponent.default)(
+'RCTSafeAreaView');exports.default = _default;

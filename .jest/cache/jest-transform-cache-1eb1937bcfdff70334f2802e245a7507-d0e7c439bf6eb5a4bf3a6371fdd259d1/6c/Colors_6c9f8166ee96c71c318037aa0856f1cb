@@ -1,0 +1,20 @@
+98d72eb3b7437f94dd05f7d2d58662ce
+
+
+
+
+
+
+
+
+
+
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default =
+
+{
+  primary: '#1292B4',
+  white: '#FFF',
+  lighter: '#F3F3F3',
+  light: '#DAE1E7',
+  dark: '#444',
+  black: '#000' };exports.default = _default;

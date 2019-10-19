@@ -1,0 +1,18 @@
+6d21381bbaef07035e55ddfbabaf8b9e
+
+
+
+
+
+
+
+
+
+
+'use strict';
+
+
+
+
+
+module.exports = require("../createAnimatedComponent")(require("../../../Text/Text"));
