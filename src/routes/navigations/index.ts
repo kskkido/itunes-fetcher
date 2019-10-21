@@ -1,18 +1,18 @@
 import { join } from 'utils/path';
 
-export const NAVIGATION_ROOT = {
+export const NAVIGATION_HOME = {
   name: 'home',
   path: '/',
 };
 
 export const NAVIGATION_SEARCH = {
   name: 'search',
-  path: join(NAVIGATION_ROOT.path, '/search'),
+  path: join(NAVIGATION_HOME.path, '/search'),
 };
 
 export const NAVIGATION_ALBUMS = {
   name: 'albums',
-  path: join(NAVIGATION_ROOT.path, '/albums'),
+  path: join(NAVIGATION_HOME.path, '/albums'),
 };
 
 export const NAVIGATION_ALBUMS_ALBUM = {
