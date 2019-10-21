@@ -9,6 +9,7 @@ const Home = createStackNavigator(
   {
     [navigations.NAVIGATION_HOME.name]: {
       screen: Root,
+      navigationOptions: { title: 'Home' },
     },
     [navigations.NAVIGATION_ALBUMS.name]: {
       screen: Albums,

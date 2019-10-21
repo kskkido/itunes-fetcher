@@ -10,6 +10,21 @@ export const NAVIGATION_SEARCH = {
   path: join(NAVIGATION_HOME.path, '/search'),
 };
 
+export const NAVIGATION_SEARCH_RESULTS = {
+  name: 'searchResults',
+  path: join(NAVIGATION_SEARCH.path, '/results'),
+};
+
+export const NAVIGATION_SEARCH_RESULTS_SONGS = {
+  name: 'searchResultsSongs',
+  path: join(NAVIGATION_SEARCH_RESULTS.path, '/songs'),
+};
+
+export const NAVIGATION_SEARCH_RESULTS_ALBUMS = {
+  name: 'searchResultsAlbums',
+  path: join(NAVIGATION_SEARCH_RESULTS.path, '/albums'),
+};
+
 export const NAVIGATION_ALBUMS = {
   name: 'albums',
   path: join(NAVIGATION_HOME.path, '/albums'),

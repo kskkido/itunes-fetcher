@@ -1,24 +1,13 @@
-import React, { useCallback } from 'react';
-import { Button, Text, View } from 'react-native';
+import React from 'react';
 import { NavigationParams, NavigationScreenProp, NavigationState } from 'react-navigation';
-import { NAVIGATION_ALBUMS } from 'routes/navigations';
-import Heading from 'components/Shared/Heading';
+import Search from 'components/Search';
 
 type RootProps = {
   navigation: NavigationScreenProp<NavigationState, NavigationParams>;
 };
 
-const Root: React.SFC<RootProps> = ({ navigation }) => (
-  <View>
-    <Heading level={2}>Search</Heading>
-    <Heading level={2}>Search</Heading>
-    <Button
-      title="try me"
-      onPress={useCallback(() => {
-        navigation.navigate(NAVIGATION_ALBUMS.name);
-      }, [])}
-    />
-  </View>
+const Root: React.SFC<RootProps> = () => (
+  <Search />
 );
 
 export default Root;
