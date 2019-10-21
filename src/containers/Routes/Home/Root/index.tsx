@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
-import { View, Text, Button } from 'react-native';
-import { NavigationScreenProp, NavigationState, NavigationParams } from 'react-navigation';
+import { Button, Text, View } from 'react-native';
+import { NavigationParams, NavigationScreenProp, NavigationState } from 'react-navigation';
 import { NAVIGATION_ARTISTS } from 'routes/navigations';
 
 type RootProps = {

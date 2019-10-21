@@ -1,7 +1,8 @@
 import { createStackNavigator } from 'react-navigation-stack';
-import * as navigations from 'routes/navigations';
 import Albums from 'containers/Routes/Albums';
 import Artists from 'containers/Routes/Artists';
+import * as navigations from 'routes/navigations';
+
 import Root from './Root';
 
 const Home = createStackNavigator(

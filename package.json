@@ -9,6 +9,7 @@
     "test": "jest",
     "lint": "yarn lint:ts",
     "lint:ts": "tslint -p ./",
+    "lint:ts-check": "tslint-config-prettier-check ./tslint.json",
     "ts-compile": "tsc --noEmit --project ."
   },
   "dependencies": {
@@ -43,6 +44,7 @@
     "ts-jest": "24.1.0",
     "tslint": "5.20.0",
     "tslint-config-airbnb": "5.11.2",
+    "tslint-config-prettier": "^1.18.0",
     "tslint-react": "4.1.0",
     "typescript": "3.6.4"
   },
