@@ -3,7 +3,7 @@ import React from 'react';
 import { TextInput, StyleSheet } from 'react-native';
 import TextContainer from '../Parts/TextContainer';
 
-type InputTextProps = TextInput['props'];
+export type InputTextProps = TextInput['props'];
 
 const InputText: React.SFC<InputTextProps> = props => (
   <TextContainer>

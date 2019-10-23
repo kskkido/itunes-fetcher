@@ -4,7 +4,7 @@ import { TextInput, StyleSheet } from 'react-native';
 import Search from 'components/Shared/Icons/Search';
 import TextContainer from '../Parts/TextContainer';
 
-type InputTextSearchProps = TextInput['props'];
+export type InputTextSearchProps = TextInput['props'];
 
 const InputTextSearch: React.SFC<InputTextSearchProps> = props => (
   <TextContainer>

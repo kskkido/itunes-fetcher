@@ -1,11 +1,11 @@
 import { useContext } from 'react';
-import { FormContext, FormContextRenderProps } from 'containers/Misc/Contexts/FormContext';
+import { FormContext, FormContextRenderProps, FormValues } from 'containers/Misc/Contexts/FormContext';
 
-type UseFormPayload = (
-  FormContextRenderProps
+type UseFormPayload<V extends FormValues = FormValues> = (
+  FormContextRenderProps<V>
 );
 
-const useForm = (): UseFormPayload => (
+const useForm = <V extends FormValues = FormValues>(): UseFormPayload<V> => (
   useContext(FormContext)
 );
 

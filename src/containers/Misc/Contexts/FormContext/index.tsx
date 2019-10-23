@@ -6,12 +6,12 @@ export type FormContextProviderProps = {
   onChange?: (values: FormValues) => void;
 };
 
-export type FormContextRenderProps = {
-  values: FormValues;
+export type FormContextRenderProps<V extends FormValues = FormValues> = {
+  values: V;
   setValue: (key: string, value: any) => void;
 };
 
-type FormValues = (
+export type FormValues = (
   Record<string, any>
 );
 
