@@ -38,6 +38,6 @@ export type SearchResult = {
 };
 
 export type Kind = (
-  'songs' |
-  'albums'
+  'song' |
+  'album'
 );
