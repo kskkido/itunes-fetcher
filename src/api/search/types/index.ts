@@ -9,7 +9,7 @@ export type SearchPayload = {
 
 export type SearchResult = {
   wrapperType: string;
-  kind: string; // union type?
+  kind: Kind; // union type?
   artistId: number;
   collectionId: number;
   trackId: number;
@@ -36,3 +36,8 @@ export type SearchResult = {
   currency: string;
   primaryGenreName: string;
 };
+
+export type Kind = (
+  'songs' |
+  'albums'
+);

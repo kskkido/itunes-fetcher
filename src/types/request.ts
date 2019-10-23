@@ -2,13 +2,12 @@ export type Request<Result> = (
   (url: string, options?: RequestInit) => Promise<Result>
 );
 
-export enum HttpMethod {
-  put = 'PUT',
-  post = 'POST',
-  get = 'GET',
-  delete = 'DELETE',
-  patch = 'PATCH',
-}
+export type RequestStatus = (
+  'error' |
+  'loading' |
+  'success' |
+  'unsent'
+);
 
 export type RequestError = (
   Error |
@@ -22,7 +21,16 @@ export type ErrorWithResponse = (
   }
 );
 
+export enum HttpMethod {
+  put = 'PUT',
+  post = 'POST',
+  get = 'GET',
+  delete = 'DELETE',
+  patch = 'PATCH',
+}
+
 export type FetchApiConfig = {
   url: string;
   params?: Record<string, any>;
 };
+
