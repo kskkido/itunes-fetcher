@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { makeSelectSearchStatus } from 'states/search/selectors';
-import Render from 'components/Shared/Render';
+import AsyncContainer from 'components/Shared/AsyncContainer';
 
 type AsyncSearchContainerProps = {
   children: React.ReactNode;
@@ -9,14 +9,10 @@ type AsyncSearchContainerProps = {
 
 const AsyncSearchContainer: React.SFC<AsyncSearchContainerProps> = ({
   children,
-}) => {
-  const status = useSelector(makeSelectSearchStatus());
-
-  return (
-    <Render when={status === 'success'}>
-      {children}
-    </Render>
-  );
-};
+}) => (
+  <AsyncContainer status={useSelector(makeSelectSearchStatus())}>
+    {children}
+  </AsyncContainer>
+);
 
 export default AsyncSearchContainer;
