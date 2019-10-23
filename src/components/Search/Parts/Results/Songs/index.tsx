@@ -2,6 +2,7 @@ import React from 'react';
 import { NAVIGATION_SEARCH_RESULTS_SONGS } from 'routes/navigations';
 import Link from 'components/Shared/Link';
 import Heading from 'components/Shared/Heading';
+import Section from 'components/Search/Parts/Section';
 import SectionHeader from 'components/Search/Parts/SectionHeader';
 import ResultList from 'components/Search/Parts/ResultList';
 
@@ -12,7 +13,7 @@ type SongsProps = {
 const Songs: React.SFC<SongsProps> = ({
   ids,
 }) => (
-  <React.Fragment>
+  <Section>
     <SectionHeader>
       <Heading level={3}>
         Songs
@@ -22,7 +23,7 @@ const Songs: React.SFC<SongsProps> = ({
       </Link>
     </SectionHeader>
     <ResultList ids={ids} />
-  </React.Fragment>
+  </Section>
 );
 
 export default Songs;

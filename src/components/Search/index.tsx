@@ -12,12 +12,8 @@ const Search: React.SFC = () => (
       <SearchForm />
     </Section>
     <AsyncSearchContainer>
-      <Section>
-        <Songs />
-      </Section>
-      <Section>
-        <Albums />
-      </Section>
+      <Songs />
+      <Albums />
     </AsyncSearchContainer>
   </Container>
 );
