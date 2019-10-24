@@ -1,6 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { makeSelectSearchStatus } from 'states/search/selectors';
+import { createSelector } from 'reselect';
+import { composeRequestStatuses } from 'utils/request';
+import * as albumsSelector from 'states/albums/selectors';
+import * as songsSelector from 'states/songs/selectors';
 import AsyncContainer from 'components/Shared/AsyncContainer';
 
 type AsyncSearchContainerProps = {
@@ -13,6 +16,12 @@ const AsyncSearchContainer: React.SFC<AsyncSearchContainerProps> = ({
   <AsyncContainer status={useSelector(makeSelectSearchStatus())}>
     {children}
   </AsyncContainer>
+);
+
+const makeSelectSearchStatus = () => createSelector(
+  albumsSelector.makeSelectRequestStatus(),
+  songsSelector.makeSelectRequestStatus(),
+  (...statuses) => composeRequestStatuses(statuses)
 );
 
 export default AsyncSearchContainer;

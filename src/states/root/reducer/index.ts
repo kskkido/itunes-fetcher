@@ -1,10 +1,13 @@
 import { combineReducers } from 'states/utils/reducer';
-import { searchReducer, SearchState } from 'states/search/reducer';
+import { albumsReducer, AlbumsState } from 'states/albums/reducer';
+import { songsReducer, SongsState } from 'states/songs/reducer';
 
 export type RootState = {
-  search: SearchState;
+  albums: AlbumsState;
+  songs: SongsState;
 };
 
 export const rootReducer = combineReducers<RootState>({
-  search: searchReducer,
+  albums: albumsReducer,
+  songs: songsReducer,
 });

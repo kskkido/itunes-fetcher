@@ -4,7 +4,8 @@ import Link from 'components/Shared/Link';
 import Heading from 'components/Shared/Heading';
 import Section from 'components/Search/Parts/Section';
 import SectionHeader from 'components/Search/Parts/SectionHeader';
-import ResultList from 'components/Search/Parts/ResultList';
+import CardList from 'components/Search/Parts/CardList';
+import Album from 'containers/Search/Parts/Results/Album';
 
 type AlbumsProps = {
   ids: string[];
@@ -22,7 +23,9 @@ const Albums: React.SFC<AlbumsProps> = ({
         See All...
       </Link>
     </SectionHeader>
-    <ResultList ids={ids} />
+    <CardList>
+      {ids.map(id => <Album key={id} id={id} />)}
+    </CardList>
   </Section>
 );
 

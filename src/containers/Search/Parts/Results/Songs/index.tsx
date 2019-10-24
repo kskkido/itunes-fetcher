@@ -1,11 +1,11 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { makeSelectSongIds } from 'states/search/selectors';
+import * as songsSelectors from 'states/songs/selectors';
 import Render from 'components/Shared/Render';
 import SongsComponent from 'components/Search/Parts/Results/Songs';
 
 const Songs: React.SFC = () => {
-  const ids = useSelector(makeSelectSongIds());
+  const ids = useSelector(songsSelectors.makeSelectAllIds());
 
   return (
     <Render when={ids.length > 0}>

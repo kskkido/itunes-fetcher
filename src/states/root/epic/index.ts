@@ -1,6 +1,8 @@
 import { combineEpics } from 'redux-observable';
-import { searchEpic } from 'states/search/epic';
+import { albumsEpic } from 'states/albums/epic';
+import { songsEpic } from 'states/songs/epic';
 
 export const rootEpic = combineEpics(
-  searchEpic
+  albumsEpic,
+  songsEpic as any // fix type
 );
