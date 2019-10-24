@@ -10,7 +10,7 @@
     "lint": "yarn lint:ts",
     "lint:ts": "tslint -p ./",
     "lint:ts-check": "tslint-config-prettier-check ./tslint.json",
-    "ts-compile": "tsc --noEmit --project ."
+    "ts-compile": "tsc --noEmit --project ./tsconfig.json"
   },
   "dependencies": {
     "query-string": "^6.8.3",
@@ -60,16 +60,11 @@
     "typescript": "3.6.4"
   },
   "lint-staged": {
-    "./src/*": [
-      "yarn ts-compile",
-      "yarn lint",
-      "prettier --write",
-      "git add"
-    ]
+    "src/**/*.{ts,tsx}": "yarn lint"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "yarn ts-compile && lint-staged"
     }
   }
 }

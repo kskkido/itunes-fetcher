@@ -9,7 +9,7 @@ export const map = (fn: ((node: React.ReactElement) => React.ReactElement), node
         : node
     )
   )
-)
+);
 
 export const intersperse = (separator: React.ReactNode, nodes: React.ReactNode[]) => (
   map(i => i, R.intersperse(separator, nodes))
