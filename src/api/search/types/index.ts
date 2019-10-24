@@ -15,5 +15,6 @@ export type Country = (
 
 export type Entity = (
   'album' |
+  'software' |
   'song'
 );
