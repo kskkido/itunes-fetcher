@@ -10,11 +10,11 @@ const Search = createStackNavigator(
       screen: Root,
       navigationOptions: { title: 'Search' },
     },
-    [navigations.NAVIGATION_SEARCH_RESULTS_ALBUMS.name]: {
+    [navigations.NAVIGATION_SEARCH_ALBUMS.name]: {
       screen: Albums,
       navigationOptions: { title: 'Albums' },
     },
-    [navigations.NAVIGATION_SEARCH_RESULTS_SONGS.name]: {
+    [navigations.NAVIGATION_SEARCH_SONGS.name]: {
       screen: Songs,
       navigationOptions: { title: 'Songs' },
     },

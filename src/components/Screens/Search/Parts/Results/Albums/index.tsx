@@ -1,5 +1,5 @@
 import React from 'react';
-import { NAVIGATION_SEARCH_RESULTS_ALBUMS } from 'routes/navigations';
+import { NAVIGATION_SEARCH_ALBUMS } from 'routes/navigations';
 import Link from 'components/Shared/Link';
 import Heading from 'components/Shared/Heading';
 import Section from 'components/Shared/Section';
@@ -19,7 +19,7 @@ const Albums: React.SFC<AlbumsProps> = ({
       <Heading level={3}>
         Albums
       </Heading>
-      <Link to={NAVIGATION_SEARCH_RESULTS_ALBUMS.name}>
+      <Link to={NAVIGATION_SEARCH_ALBUMS.name}>
         See All...
       </Link>
     </SectionHeader>

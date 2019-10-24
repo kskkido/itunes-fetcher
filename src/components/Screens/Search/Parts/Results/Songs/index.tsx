@@ -1,5 +1,5 @@
 import React from 'react';
-import { NAVIGATION_SEARCH_RESULTS_SONGS } from 'routes/navigations';
+import { NAVIGATION_SEARCH_SONGS } from 'routes/navigations';
 import Link from 'components/Shared/Link';
 import Heading from 'components/Shared/Heading';
 import Section from 'components/Shared/Section';
@@ -19,7 +19,7 @@ const Songs: React.SFC<SongsProps> = ({
       <Heading level={3}>
         Songs
       </Heading>
-      <Link to={NAVIGATION_SEARCH_RESULTS_SONGS.name}>
+      <Link to={NAVIGATION_SEARCH_SONGS.name}>
         See All...
       </Link>
     </SectionHeader>

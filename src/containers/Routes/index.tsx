@@ -9,7 +9,7 @@ const Routes = createBottomTabNavigator(
     [navigations.NAVIGATION_SEARCH.name]: Search,
   },
   {
-    initialRouteName: navigations.NAVIGATION_HOME.name,
+    initialRouteName: navigations.NAVIGATION_SEARCH.name,
   }
 );
 

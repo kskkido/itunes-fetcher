@@ -10,37 +10,12 @@ export const NAVIGATION_SEARCH = {
   path: join(NAVIGATION_HOME.path, '/search'),
 };
 
-export const NAVIGATION_SEARCH_RESULTS = {
-  name: 'searchResults',
-  path: join(NAVIGATION_SEARCH.path, '/results'),
-};
-
-export const NAVIGATION_SEARCH_RESULTS_SONGS = {
+export const NAVIGATION_SEARCH_SONGS = {
   name: 'searchResultsSongs',
-  path: join(NAVIGATION_SEARCH_RESULTS.path, '/songs'),
+  path: join(NAVIGATION_SEARCH.path, '/songs'),
 };
 
-export const NAVIGATION_SEARCH_RESULTS_ALBUMS = {
+export const NAVIGATION_SEARCH_ALBUMS = {
   name: 'searchResultsAlbums',
-  path: join(NAVIGATION_SEARCH_RESULTS.path, '/albums'),
-};
-
-export const NAVIGATION_ALBUMS = {
-  name: 'albums',
-  path: join(NAVIGATION_HOME.path, '/albums'),
-};
-
-export const NAVIGATION_ALBUMS_ALBUM = {
-  name: 'album',
-  path: join(NAVIGATION_ALBUMS.path, '/:identifier'),
-};
-
-export const NAVIGATION_ARTISTS = {
-  name: 'artists',
-  path: '/artists',
-};
-
-export const NAVIGATION_ARTISTS_ARTIST = {
-  name: 'artist',
-  path: join(NAVIGATION_ARTISTS.path, '/:identifier'),
+  path: join(NAVIGATION_SEARCH.path, '/albums'),
 };

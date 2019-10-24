@@ -1,7 +1,6 @@
-import React, { useCallback } from 'react';
-import { Button, Text, View } from 'react-native';
+import React from 'react';
+import { Text, View } from 'react-native';
 import { NavigationParams, NavigationScreenProp, NavigationState } from 'react-navigation';
-import { NAVIGATION_ARTISTS } from 'routes/navigations';
 
 type RootProps = {
   navigation: NavigationScreenProp<NavigationState, NavigationParams>;
@@ -9,16 +8,7 @@ type RootProps = {
 
 const Root: React.SFC<RootProps> = ({ navigation }) => (
   <View>
-    <Text>Home</Text>
-    <Button
-      title="try me"
-      onPress={useCallback(
-        () => {
-          navigation.navigate(NAVIGATION_ARTISTS.name);
-        },
-        []
-      )}
-    />
+    <Text>Working on it</Text>
   </View>
 );
 
