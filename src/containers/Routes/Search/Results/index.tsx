@@ -7,6 +7,7 @@ const Results = createStackNavigator(
   {
     [navigations.NAVIGATION_SEARCH_RESULTS_ALBUMS.name]: {
       screen: Albums,
+      navigationOptions: { title: 'Albums' },
     },
     [navigations.NAVIGATION_SEARCH_RESULTS_SONGS.name]: {
       screen: Songs,
