@@ -2,9 +2,9 @@ import React from 'react';
 import { NAVIGATION_SEARCH_RESULTS_ALBUMS } from 'routes/navigations';
 import Link from 'components/Shared/Link';
 import Heading from 'components/Shared/Heading';
-import Section from 'components/Search/Parts/Section';
-import SectionHeader from 'components/Search/Parts/SectionHeader';
-import CardList from 'components/Search/Parts/CardList';
+import Section from 'components/Shared/Section';
+import SectionHeader from 'components/Shared/SectionHeader';
+import ListColumn from 'components/Shared/ListColumn';
 import Album from 'containers/Search/Parts/Results/Album';
 
 type AlbumsProps = {
@@ -23,9 +23,9 @@ const Albums: React.SFC<AlbumsProps> = ({
         See All...
       </Link>
     </SectionHeader>
-    <CardList>
+    <ListColumn>
       {ids.map(id => <Album key={id} id={id} />)}
-    </CardList>
+    </ListColumn>
   </Section>
 );
 

@@ -2,9 +2,9 @@ import React from 'react';
 import { NAVIGATION_SEARCH_RESULTS_SONGS } from 'routes/navigations';
 import Link from 'components/Shared/Link';
 import Heading from 'components/Shared/Heading';
-import Section from 'components/Search/Parts/Section';
-import SectionHeader from 'components/Search/Parts/SectionHeader';
-import CardList from 'components/Search/Parts/CardList';
+import Section from 'components/Shared/Section';
+import SectionHeader from 'components/Shared/SectionHeader';
+import ListColumn from 'components/Shared/ListColumn';
 import Song from 'containers/Search/Parts/Results/Song';
 
 type SongsProps = {
@@ -23,9 +23,9 @@ const Songs: React.SFC<SongsProps> = ({
         See All...
       </Link>
     </SectionHeader>
-    <CardList>
+    <ListColumn>
       {ids.map(id => <Song key={id} id={id} />)}
-    </CardList>
+    </ListColumn>
   </Section>
 );
 

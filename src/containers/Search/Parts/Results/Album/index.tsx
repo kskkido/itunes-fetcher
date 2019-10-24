@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from 'states/root/reducer';
 import * as albumsSelectors from 'states/albums/selectors';
-import Card from 'components/Search/Parts/Card';
+import HorizontalDataCard from 'components/Shared/Cards/HorizontalDataCard';
 
 type AlbumProps = {
   id: string;
@@ -13,7 +13,7 @@ const Album: React.SFC<AlbumProps> = props => {
   const result = useSelector((state: RootState) => selectById(state, props));
 
   return (
-    <Card
+    <HorizontalDataCard
       title={result.collectionName}
       subtitle={result.artistName}
     />
