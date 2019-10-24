@@ -1,13 +1,13 @@
 import React from 'react';
 import { NavigationParams, NavigationScreenProp, NavigationState } from 'react-navigation';
-import Search from 'components/Screens/Search';
+import Albums from 'components/Screens/Albums';
 
 type RootProps = {
   navigation: NavigationScreenProp<NavigationState, NavigationParams>;
 };
 
 const Root: React.SFC<RootProps> = () => (
-  <Search />
+  <Albums />
 );
 
 export default Root;

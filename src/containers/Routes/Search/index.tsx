@@ -1,9 +1,8 @@
 import { createStackNavigator } from 'react-navigation-stack';
 import * as navigations from 'routes/navigations';
-import Albums from 'containers/Routes/Albums';
-import Artists from 'containers/Routes/Artists';
+import Albums from './Albums/Root';
+import Songs from './Songs/Root';
 import Root from './Root';
-import Results from './Results';
 
 const Search = createStackNavigator(
   {
@@ -11,15 +10,13 @@ const Search = createStackNavigator(
       screen: Root,
       navigationOptions: { title: 'Search' },
     },
-    [navigations.NAVIGATION_SEARCH_RESULTS.name]: {
-      screen: Results,
-      navigationOptions: { title: 'Results' },
-    },
-    [navigations.NAVIGATION_ALBUMS.name]: {
+    [navigations.NAVIGATION_SEARCH_RESULTS_ALBUMS.name]: {
       screen: Albums,
+      navigationOptions: { title: 'Albums' },
     },
-    [navigations.NAVIGATION_ARTISTS.name]: {
-      screen: Artists,
+    [navigations.NAVIGATION_SEARCH_RESULTS_SONGS.name]: {
+      screen: Songs,
+      navigationOptions: { title: 'Songs' },
     },
   },
   {
