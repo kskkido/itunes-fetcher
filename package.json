@@ -51,7 +51,7 @@
     "typescript": "3.6.4"
   },
   "lint-staged": {
-    "./src/*": [
+    "src/**/*.{ts,tsx}": [
       "yarn ts-compile",
       "yarn lint",
       "prettier --write",
