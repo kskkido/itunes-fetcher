@@ -1,4 +1,5 @@
 import apiFetch from 'api/utils/apiFetch';
+import { ITUNES_SEARCH_API } from 'constants/urls';
 import { SearchParams, SearchPayload } from './types';
 
 export default {
@@ -13,7 +14,7 @@ export default {
         entity: 'album',
         country: 'US',
       },
-      url: 'https://itunes.apple.com/search',
+      url: ITUNES_SEARCH_API,
     })
   ),
 };
