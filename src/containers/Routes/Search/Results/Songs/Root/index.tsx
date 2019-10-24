@@ -1,25 +1,13 @@
-import React, { useCallback } from 'react';
-import { Button, Text, View } from 'react-native';
+import React from 'react';
 import { NavigationParams, NavigationScreenProp, NavigationState } from 'react-navigation';
-import { NAVIGATION_ARTISTS } from 'routes/navigations';
+import Songs from 'components/Search/Results/Songs';
 
 type RootProps = {
   navigation: NavigationScreenProp<NavigationState, NavigationParams>;
 };
 
-const Root: React.SFC<RootProps> = ({ navigation }) => (
-  <View>
-    <Text>Song search results</Text>
-    <Button
-      title="try me"
-      onPress={useCallback(
-        () => {
-          navigation.navigate(NAVIGATION_ARTISTS.name);
-        },
-        []
-      )}
-    />
-  </View>
+const Root: React.SFC<RootProps> = () => (
+  <Songs />
 );
 
 export default Root;
