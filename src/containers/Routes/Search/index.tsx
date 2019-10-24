@@ -17,7 +17,7 @@ const Search = createStackNavigator(
     },
     [navigations.NAVIGATION_SEARCH_APPLICATIONS.name]: {
       screen: Applications,
-      navigationOptions: { title: 'Applications' },
+      navigationOptions: { title: 'Apps' },
     },
     [navigations.NAVIGATION_SEARCH_SONGS.name]: {
       screen: Songs,

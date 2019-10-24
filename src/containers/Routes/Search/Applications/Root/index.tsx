@@ -1,15 +1,13 @@
 import React from 'react';
-import { Text, View } from 'react-native';
 import { NavigationParams, NavigationScreenProp, NavigationState } from 'react-navigation';
+import Applications from 'components/Screens/Applications';
 
 type RootProps = {
   navigation: NavigationScreenProp<NavigationState, NavigationParams>;
 };
 
-const Root: React.SFC<RootProps> = ({ navigation }) => (
-  <View>
-    <Text>Working on it</Text>
-  </View>
+const Root: React.SFC<RootProps> = () => (
+  <Applications />
 );
 
 export default Root;
