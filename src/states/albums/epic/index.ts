@@ -1,6 +1,6 @@
 import { combineEpics } from 'redux-observable';
-import { searchEpic } from './search';
+import { fetchEpic } from './fetch';
 
 export const albumsEpic = combineEpics(
-  searchEpic
+  fetchEpic
 );

@@ -1,14 +1,14 @@
-import { SearchResult } from 'api/search/songs/types';
+import { Song } from 'api/songs/types';
 import { createReducer } from 'states/utils/reducer';
 import * as actions from 'states/songs/actions';
 
 export type ByIdState = (
-  Record<string, SearchResult>
+  Record<string, Song>
 );
 
 export const byIdReducer = createReducer<ByIdState>({})
   .case(
-    actions.songsSearchResultReceive,
+    actions.songsReceive,
     (_, payload) => (
       payload.results.reduce(
         (acc, result) => (acc[`${result.trackId}`] = result, acc),

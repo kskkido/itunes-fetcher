@@ -5,6 +5,6 @@ export type AllIdsState = string[];
 
 export const allIdsReducer = createReducer<AllIdsState>([])
   .case(
-    actions.songsSearchResultReceive,
+    actions.songsReceive,
     (_, payload) => payload.results.map(result => `${result.trackId}`)
   );

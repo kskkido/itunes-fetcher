@@ -1,18 +1,20 @@
 import apiFetch from 'api/utils/apiFetch';
 import { ITUNES_SEARCH_API } from 'constants/urls';
-import { SearchParams, SearchPayload } from './types';
+import { GetParams, GetPayload } from './types';
 
 export default {
-  get: (
-    params: SearchParams
+  get: <V>(
+    {
+      country = 'US',
+      ...rest
+    }: GetParams
   ): Promise<
-    SearchPayload
+    GetPayload<V>
   > => (
     apiFetch.get({
       params: {
-        ...params,
-        entity: 'album',
-        country: 'US',
+        country,
+        ...rest,
       },
       url: ITUNES_SEARCH_API,
     })

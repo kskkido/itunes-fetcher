@@ -1,13 +1,14 @@
-export type SearchParams = {
-  term: string;
-};
+import * as searchTypes from 'api/search/types';
 
-export type SearchPayload = {
-  resultCount: number;
-  results: SearchResult[];
-};
+export type GetParams = (
+  Pick<searchTypes.GetParams, 'term'>
+);
 
-export type SearchResult = {
+export type GetPayload = (
+  searchTypes.GetPayload<Song>
+);
+
+export type Song = {
   wrapperType: string;
   artistId: number;
   trackId: number;

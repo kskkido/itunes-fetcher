@@ -5,6 +5,6 @@ export type AllIdsState = string[];
 
 export const allIdsReducer = createReducer<AllIdsState>([])
   .case(
-    actions.albumsSearchResultReceive,
+    actions.albumsReceive,
     (_, payload) => payload.results.map(result => `${result.collectionId}`)
   );

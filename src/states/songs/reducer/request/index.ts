@@ -8,14 +8,14 @@ export type RequestState = {
 
 export const requestReducer = createReducer<RequestState>({ status: 'unsent' })
   .case(
-    actions.songsSearchLoading,
+    actions.songsFetchLoading,
     () => ({ status: 'loading' })
   )
   .case(
-    actions.songsSearchSuccess,
+    actions.songsFetchSuccess,
     () => ({ status: 'success' })
   )
   .case(
-    actions.songsSearchFailure,
+    actions.songsFetchFailure,
     () => ({ status: 'error'})
   );

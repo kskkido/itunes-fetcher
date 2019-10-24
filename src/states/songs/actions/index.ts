@@ -1,9 +1,9 @@
-import { SearchParams, SearchPayload } from 'api/search/songs/types';
+import * as songsTypes from 'api/songs/types';
 import { createActionCreator } from 'states/utils/action';
 
-export const songsSearch = createActionCreator<SearchParams>('songsSearch');
-export const songsSearchLoading = createActionCreator('songsSearchLoading');
-export const songsSearchSuccess = createActionCreator('songsSearchSuccess');
-export const songsSearchFailure = createActionCreator('songsSearchFailure');
-export const songsSearchResultReceive = createActionCreator<SearchPayload>('songsSearchResultsReceiveSongs');
-export const songsSearchResultsClear = createActionCreator('songsSearchResultsClear');
+export const songsFetch = createActionCreator<songsTypes.GetParams>('songsFetch');
+export const songsFetchLoading = createActionCreator('songsFetchLoading');
+export const songsFetchSuccess = createActionCreator('songsFetchSuccess');
+export const songsFetchFailure = createActionCreator('songsFetchFailure');
+export const songsReceive = createActionCreator<songsTypes.GetPayload>('songsReceive');
+export const songsClear = createActionCreator('songsClear');

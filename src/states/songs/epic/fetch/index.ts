@@ -5,30 +5,30 @@ import { RequestError } from 'types/request';
 import { isActionOf } from 'states/utils/action';
 import { RootState } from 'states/root/reducer';
 import { RootActions } from 'states/root/actions';
-import * as actions from 'states/albums/actions';
-import search from 'api/search/albums';
+import * as actions from 'states/songs/actions';
+import search from 'api/songs';
 
 type Actions = ActionsOf<typeof actions>;
 
-export const searchEpic: Epic<
+export const fetchEpic: Epic<
   RootActions,
   Actions,
   RootState
 > = action$ => (
   action$
-    .filter(isActionOf(actions.albumsSearch))
+    .filter(isActionOf(actions.songsFetch))
     .mergeMap(({ payload }) => (
       Rx.Observable.concat<Actions>(
-        Rx.Observable.of(actions.albumsSearchLoading()),
+        Rx.Observable.of(actions.songsFetchLoading()),
         Rx.Observable.fromPromise(search.get(payload))
           .mergeMap(response => (
             Rx.Observable.concat<Actions>(
-              Rx.Observable.of(actions.albumsSearchResultReceive(response)),
-              Rx.Observable.of(actions.albumsSearchSuccess())
+              Rx.Observable.of(actions.songsReceive(response)),
+              Rx.Observable.of(actions.songsFetchSuccess())
             )
           ))
           .catch((_: RequestError) => (
-            Rx.Observable.of(actions.albumsSearchFailure()))
+            Rx.Observable.of(actions.songsFetchFailure()))
           )
       )
     ))
