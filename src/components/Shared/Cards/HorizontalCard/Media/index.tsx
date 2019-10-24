@@ -1,11 +1,18 @@
 import styles from './styles';
 import React from 'react';
-import { View } from 'react-native';
+import { Image } from 'react-native';
 
-const Media: React.SFC = ({
-  children,
+type MediaProps = (
+  Pick<Image['props'], 'source'>
+);
+
+const Media: React.SFC<MediaProps> = ({
+  source,
 }) => (
-  <View style={styles.base} />
+  <Image
+    style={styles.base}
+    source={source}
+  />
 );
 
 export default Media;

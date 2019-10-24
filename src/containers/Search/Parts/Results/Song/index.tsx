@@ -14,6 +14,7 @@ const Song: React.SFC<SongProps> = props => {
 
   return (
     <HorizontalDataCard
+      artwork={result.artworkUrl60}
       title={result.trackName}
       subtitle={result.artistName}
     />
