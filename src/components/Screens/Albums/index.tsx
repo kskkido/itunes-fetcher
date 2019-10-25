@@ -1,11 +1,11 @@
 import React from 'react';
-import PageContainer from 'components/Shared/Layouts/PageContainer';
+import ScreenContainer from 'components/Shared/Layouts/ScreenContainer';
 import ResultsAlbums from 'containers/Screens/Albums/Parts/Results/Albums';
 
 const Albums: React.SFC = () => (
-  <PageContainer>
+  <ScreenContainer>
     <ResultsAlbums />
-  </PageContainer>
+  </ScreenContainer>
 );
 
 export default Albums;

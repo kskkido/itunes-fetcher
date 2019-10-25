@@ -1,11 +1,11 @@
 import React from 'react';
-import PageContainer from 'components/Shared/Layouts/PageContainer';
+import ScrenContainer from 'components/Shared/Layouts/ScreenContainer';
 import ResultsSongs from 'containers/Screens/Songs/Parts/Results/Songs';
 
 const Songs: React.SFC = () => (
-  <PageContainer>
+  <ScrenContainer>
     <ResultsSongs />
-  </PageContainer>
+  </ScrenContainer>
 );
 
 export default Songs;

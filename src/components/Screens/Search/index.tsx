@@ -4,11 +4,11 @@ import SearchForm from 'containers/Screens/Search/Parts/Forms/SearchForm';
 import Albums from 'containers/Screens/Search/Parts/Results/Albums';
 import Applications from 'containers/Screens/Search/Parts/Results/Applications';
 import Songs from 'containers/Screens/Search/Parts/Results/Songs';
-import PageContainer from 'components/Shared/Layouts/PageContainer';
+import ScreenContainer from 'components/Shared/Layouts/ScreenContainer';
 import Section from 'components/Shared/Section';
 
 const Search: React.SFC = () => (
-  <PageContainer>
+  <ScreenContainer>
     <Section>
       <SearchForm />
     </Section>
@@ -17,7 +17,7 @@ const Search: React.SFC = () => (
       <Albums />
       <Applications />
     </AsyncSearchContainer>
-  </PageContainer>
+  </ScreenContainer>
 );
 
 export default Search;

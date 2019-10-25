@@ -2,11 +2,11 @@ import styles from './styles';
 import React from 'react';
 import { ScrollView } from 'react-native';
 
-type PageContainerProps = {
+type ScreenContainerProps = {
   children: React.ReactNode;
 };
 
-const PageContainer: React.SFC<PageContainerProps> = ({
+const ScreenContainer: React.SFC<ScreenContainerProps> = ({
   children,
 }) => (
   <ScrollView style={styles.base}>
@@ -14,4 +14,4 @@ const PageContainer: React.SFC<PageContainerProps> = ({
   </ScrollView>
 );
 
-export default PageContainer;
+export default ScreenContainer;
