@@ -28,3 +28,8 @@ export const makeSelectRequestStatus = () => createSelector(
   selectRequestState,
   ({ status }) => status
 );
+
+export const makeSelectRequestError = () => createSelector(
+  selectRequestState,
+  ({ error }) => error
+);

@@ -2,6 +2,7 @@ import * as Rx from 'rxjs';
 import { Epic } from 'redux-observable';
 import { ActionsOf } from 'types/state';
 import { RequestError } from 'types/request';
+import { parseRequestError } from 'utils/request/error';
 import { isActionOf } from 'states/utils/action';
 import { RootState } from 'states/root/reducer';
 import { RootActions } from 'states/root/actions';
@@ -27,9 +28,12 @@ export const fetchEpic: Epic<
               Rx.Observable.of(actions.songsFetchSuccess())
             )
           ))
-          .catch((_: RequestError) => (
-            Rx.Observable.of(actions.songsFetchFailure()))
-          )
+          .catch((requestError: RequestError) => (
+            Rx.Observable.fromPromise(parseRequestError(requestError)
+              .then(error => actions.songsFetchFailure(error))
+              .catch(error => actions.songsFetchFailure(error))
+            )
+          ))
       )
     ))
 );

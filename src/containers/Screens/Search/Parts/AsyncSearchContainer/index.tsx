@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { createSelector } from 'reselect';
-import { composeRequestStatuses } from 'utils/request';
+import { composeRequestStatuses } from 'utils/request/status';
 import * as albumsSelector from 'states/albums/selectors';
 import * as applicationsSelector from 'states/applications/selectors';
 import * as songsSelector from 'states/songs/selectors';

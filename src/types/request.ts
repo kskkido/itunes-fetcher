@@ -9,6 +9,12 @@ export type RequestStatus = (
   'unsent'
 );
 
+export type FormattedRequestError = {
+  message: string;
+  status?: number;
+  data?: any;
+};
+
 export type RequestError = (
   Error |
   ErrorWithResponse

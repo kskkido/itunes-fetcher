@@ -1,6 +1,6 @@
 import { HttpMethod, FetchApiConfig } from 'types/request';
 import { createQueryString } from 'utils/queryString';
-import { requestJSON } from 'utils/request';
+import { requestJSON } from 'utils/request/fetch';
 import { createInit } from './init';
 
 export default {
