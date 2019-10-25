@@ -17,6 +17,7 @@ const Song: React.SFC<SongProps> = props => {
       artwork={result.artworkUrl60 || ''}
       title={result.trackName}
       subtitle={result.artistName}
+      url={result.trackViewUrl}
     />
   );
 };

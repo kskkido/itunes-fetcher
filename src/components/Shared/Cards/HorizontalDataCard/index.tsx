@@ -1,29 +1,30 @@
-import React from 'react';
+import React, { useCallback } from 'react';
+import { Linking } from 'react-native';
 import Title from 'components/Shared/Title';
 import Subtitle from 'components/Shared/Subtitle';
-import HorizontalCard, { HorizontalCardProps } from 'components/Shared/Cards/HorizontalCard';
+import HorizontalCard from 'components/Shared/Cards/HorizontalCard';
 
 export type HorizontalDataCardProps = {
   title?: string;
   subtitle?: string;
   artwork?: string;
-  onPress?: HorizontalCardProps['onPress'];
+  url?: string;
 };
 
 const HorizontalDataCard: React.SFC<HorizontalDataCardProps> = ({
-  artwork,
-  title,
-  subtitle,
-  onPress,
+  artwork = '',
+  title = '-',
+  subtitle = '-',
+  url,
 }) => (
-  <HorizontalCard onPress={onPress}>
-    <HorizontalCard.Media source={{ uri: artwork || '' }}/>
+  <HorizontalCard onPress={useCallback(() => url && Linking.openURL(url), [url])}>
+    <HorizontalCard.Media source={{ uri: artwork }}/>
     <HorizontalCard.Meta>
       <Title>
-        {title || '-'}
+        {title}
       </Title>
       <Subtitle>
-        {subtitle || '-'}
+        {subtitle}
       </Subtitle>
     </HorizontalCard.Meta>
   </HorizontalCard>

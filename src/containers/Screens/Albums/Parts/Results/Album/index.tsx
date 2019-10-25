@@ -14,9 +14,10 @@ const Album: React.SFC<AlbumProps> = props => {
 
   return (
     <HorizontalDataCard
-      artwork={result.artworkUrl60 || ''}
+      artwork={result.artworkUrl60}
       title={result.collectionName}
       subtitle={result.artistName}
+      url={result.collectionViewUrl}
     />
   );
 };

@@ -14,9 +14,10 @@ const Application: React.SFC<ApplicationProps> = props => {
 
   return (
     <HorizontalDataCard
-      artwork={result.artworkUrl60 || ''}
+      artwork={result.artworkUrl60}
       title={result.trackName}
       subtitle={result.artistName}
+      url={result.trackViewUrl}
     />
   );
 };
