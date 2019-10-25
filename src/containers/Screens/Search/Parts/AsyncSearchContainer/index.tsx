@@ -14,7 +14,10 @@ type AsyncSearchContainerProps = {
 const AsyncSearchContainer: React.SFC<AsyncSearchContainerProps> = ({
   children,
 }) => (
-  <AsyncContainer status={useSelector(makeSelectSearchStatus())}>
+  <AsyncContainer
+    status={useSelector(makeSelectSearchStatus())}
+    error={useSelector(makeSelectSearchError())}
+  >
     {children}
   </AsyncContainer>
 );
@@ -24,6 +27,13 @@ const makeSelectSearchStatus = () => createSelector(
   applicationsSelector.makeSelectRequestStatus(),
   songsSelector.makeSelectRequestStatus(),
   (...statuses) => composeRequestStatuses(statuses)
+);
+
+const makeSelectSearchError = () => createSelector(
+  albumsSelector.makeSelectRequestErrorMessage(),
+  applicationsSelector.makeSelectRequestErrorMessage(),
+  songsSelector.makeSelectRequestErrorMessage(),
+  (...errors) => errors.filter(i => i)[0]
 );
 
 export default AsyncSearchContainer;

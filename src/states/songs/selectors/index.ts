@@ -33,3 +33,8 @@ export const makeSelectRequestError = () => createSelector(
   selectRequestState,
   ({ error }) => error
 );
+
+export const makeSelectRequestErrorMessage = () => createSelector(
+  makeSelectRequestError(),
+  error => error && error.message
+);

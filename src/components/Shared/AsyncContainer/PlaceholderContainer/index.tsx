@@ -2,11 +2,11 @@ import styles from './styles';
 import React from 'react';
 import { View } from 'react-native';
 
-type ContainerProps = {
+type PlaceholderContainerProps = {
   children: React.ReactNode;
 };
 
-const Container: React.SFC<ContainerProps> = ({
+const PlaceholderContainer: React.SFC<PlaceholderContainerProps> = ({
   children,
 }) => (
   <View style={styles.base}>
@@ -14,4 +14,4 @@ const Container: React.SFC<ContainerProps> = ({
   </View>
 );
 
-export default Container;
+export default PlaceholderContainer;

@@ -1,15 +1,16 @@
+import styles from './styles';
 import React from 'react';
-import Container from './Container';
-import Indicator, { IndicatorProps } from './Indicator';
+import { ActivityIndicator, StyleSheet } from 'react-native';
 
-type LoadingProps = (
-  IndicatorProps
+export type LoadingProps = (
+  ActivityIndicator['props']
 );
 
-const Loading: React.SFC<LoadingProps> = props => (
-  <Container>
-    <Indicator {...props} />
-  </Container>
+const Loading: React.SFC<LoadingProps> = (props) => (
+  <ActivityIndicator
+    {...props}
+    style={StyleSheet.flatten([props.style, styles.base])}
+  />
 );
 
 export default Loading;

@@ -6,6 +6,7 @@ export default StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
+    paddingHorizontal: 60,
     marginTop: 240, // better way?
   },
 });
