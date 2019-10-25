@@ -4,11 +4,11 @@ import { RootState } from 'states/root/reducer';
 import * as applicationsSelector from 'states/applications/selectors';
 import HorizontalDataCard from 'components/Shared/Cards/HorizontalDataCard';
 
-type ApplicationProps = {
+type ApplicationCardProps = {
   id: string;
 };
 
-const Application: React.SFC<ApplicationProps> = props => {
+const ApplicationCard: React.SFC<ApplicationCardProps> = props => {
   const selectById = useMemo(applicationsSelector.makeSelectById, []);
   const result = useSelector((state: RootState) => selectById(state, props));
 
@@ -22,4 +22,4 @@ const Application: React.SFC<ApplicationProps> = props => {
   );
 };
 
-export default Application;
+export default ApplicationCard;

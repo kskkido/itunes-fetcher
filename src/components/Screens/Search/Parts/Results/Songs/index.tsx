@@ -5,7 +5,7 @@ import Heading from 'components/Shared/Heading';
 import Section from 'components/Shared/Section';
 import SectionHeader from 'components/Shared/SectionHeader';
 import ListColumn from 'components/Shared/ListColumn';
-import Song from 'containers/Screens/Search/Parts/Results/Song';
+import SongCard from 'containers/Screens/Search/Parts/Results/SongCard';
 
 type SongsProps = {
   ids: string[];
@@ -24,7 +24,7 @@ const Songs: React.SFC<SongsProps> = ({
       </Link>
     </SectionHeader>
     <ListColumn>
-      {ids.map(id => <Song key={id} id={id} />)}
+      {ids.map(id => <SongCard key={id} id={id} />)}
     </ListColumn>
   </Section>
 );

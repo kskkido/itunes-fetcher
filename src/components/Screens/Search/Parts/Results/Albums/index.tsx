@@ -5,7 +5,7 @@ import Heading from 'components/Shared/Heading';
 import Section from 'components/Shared/Section';
 import SectionHeader from 'components/Shared/SectionHeader';
 import ListColumn from 'components/Shared/ListColumn';
-import Album from 'containers/Screens/Search/Parts/Results/Album';
+import AlbumCard from 'containers/Screens/Search/Parts/Results/AlbumCard';
 
 type AlbumsProps = {
   ids: string[];
@@ -24,7 +24,7 @@ const Albums: React.SFC<AlbumsProps> = ({
       </Link>
     </SectionHeader>
     <ListColumn>
-      {ids.map(id => <Album key={id} id={id} />)}
+      {ids.map(id => <AlbumCard key={id} id={id} />)}
     </ListColumn>
   </Section>
 );

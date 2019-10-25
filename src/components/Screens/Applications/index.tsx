@@ -1,10 +1,10 @@
 import React from 'react';
 import ScreenContainer from 'components/Shared/Layouts/ScreenContainer';
-import ResultsApplications from 'containers/Screens/Applications/Parts/Results/Applications';
+import ApplicationCardList from 'containers/Screens/Applications/Parts/ApplicationCardList';
 
 const Applications: React.SFC = () => (
   <ScreenContainer>
-    <ResultsApplications />
+    <ApplicationCardList />
   </ScreenContainer>
 );
 

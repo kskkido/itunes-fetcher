@@ -5,7 +5,7 @@ import Heading from 'components/Shared/Heading';
 import Section from 'components/Shared/Section';
 import SectionHeader from 'components/Shared/SectionHeader';
 import ListColumn from 'components/Shared/ListColumn';
-import Application from 'containers/Screens/Search/Parts/Results/Application';
+import ApplicationCard from 'containers/Screens/Search/Parts/Results/ApplicationCard';
 
 type ApplicationsProps = {
   ids: string[];
@@ -24,7 +24,7 @@ const Applications: React.SFC<ApplicationsProps> = ({
       </Link>
     </SectionHeader>
     <ListColumn>
-      {ids.map(id => <Application key={id} id={id} />)}
+      {ids.map(id => <ApplicationCard key={id} id={id} />)}
     </ListColumn>
   </Section>
 );

@@ -4,11 +4,11 @@ import { RootState } from 'states/root/reducer';
 import * as songsSelectors from 'states/songs/selectors';
 import HorizontalDataCard from 'components/Shared/Cards/HorizontalDataCard';
 
-type SongProps = {
+type SongCardProps = {
   id: string;
 };
 
-const Song: React.SFC<SongProps> = props => {
+const SongCard: React.SFC<SongCardProps> = props => {
   const selectById = useMemo(songsSelectors.makeSelectById, []);
   const result = useSelector((state: RootState) => selectById(state, props));
 
@@ -22,4 +22,4 @@ const Song: React.SFC<SongProps> = props => {
   );
 };
 
-export default Song;
+export default SongCard;

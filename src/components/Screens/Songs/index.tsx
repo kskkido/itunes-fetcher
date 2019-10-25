@@ -1,10 +1,10 @@
 import React from 'react';
 import ScrenContainer from 'components/Shared/Layouts/ScreenContainer';
-import ResultsSongs from 'containers/Screens/Songs/Parts/Results/Songs';
+import SongCardList from 'containers/Screens/Songs/Parts/SongCardList';
 
 const Songs: React.SFC = () => (
   <ScrenContainer>
-    <ResultsSongs />
+    <SongCardList />
   </ScrenContainer>
 );
 

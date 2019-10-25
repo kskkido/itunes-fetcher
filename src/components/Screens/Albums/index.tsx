@@ -1,10 +1,10 @@
 import React from 'react';
 import ScreenContainer from 'components/Shared/Layouts/ScreenContainer';
-import ResultsAlbums from 'containers/Screens/Albums/Parts/Results/Albums';
+import AlbumCardList from 'containers/Screens/Albums/Parts/AlbumCardList';
 
 const Albums: React.SFC = () => (
   <ScreenContainer>
-    <ResultsAlbums />
+    <AlbumCardList />
   </ScreenContainer>
 );
 
