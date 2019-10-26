@@ -9,6 +9,7 @@ module.exports = {
     },
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+  setupFiles: ['<rootDir>/jest.init.js'],
   testRegex: 'tests/.*\\.test\\.(?:jsx?|tsx?)$',
   transform: {
     ...tsjPreset.transform,

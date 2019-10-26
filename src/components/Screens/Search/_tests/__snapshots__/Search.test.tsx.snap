@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search should render as expected 1`] = `
+<RCTScrollView
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "borderBottomColor": "#ddd",
+          "borderBottomWidth": 1,
+          "flexDirection": "column",
+          "paddingHorizontal": 12,
+          "paddingVertical": 15,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "column",
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#eee",
+              "borderRadius": 4,
+              "flexDirection": "row",
+              "height": 45,
+              "paddingLeft": 10,
+              "width": "100%",
+            }
+          }
+        >
+          <Icon
+            name="search"
+            size={20}
+          />
+          <View
+            style={
+              Object {
+                "height": "100%",
+                "marginLeft": 5,
+                "marginRight": 5,
+              }
+            }
+          />
+          <TextInput
+            allowFontScaling={true}
+            numberOfLines={1}
+            onChangeText={[Function]}
+            onEndEditing={[Function]}
+            placeholder="Search anything"
+            rejectResponderTermination={true}
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+            underlineColorAndroid="transparent"
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;

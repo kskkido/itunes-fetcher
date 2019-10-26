@@ -1,0 +1,41 @@
+7ff38798038804ad4f4056b2d3814433
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _navigations = require("../../../../../../routes/navigations");
+
+var _Link = _interopRequireDefault(require("../../../../../Shared/Link"));
+
+var _Heading = _interopRequireDefault(require("../../../../../Shared/Heading"));
+
+var _Section = _interopRequireDefault(require("../../../../../Shared/Section"));
+
+var _SectionHeader = _interopRequireDefault(require("../../../../../Shared/SectionHeader"));
+
+var _ListColumn = _interopRequireDefault(require("../../../../../Shared/ListColumn"));
+
+var _SongCard = _interopRequireDefault(require("../../../../../../containers/Screens/Search/Parts/Results/SongCard"));
+
+var Songs = function Songs(_ref) {
+  var ids = _ref.ids;
+  return _react.default.createElement(_Section.default, null, _react.default.createElement(_SectionHeader.default, null, _react.default.createElement(_Heading.default, {
+    level: 3
+  }, "Songs"), _react.default.createElement(_Link.default, {
+    to: _navigations.NAVIGATION_SEARCH_SONGS.name
+  }, "See All...")), _react.default.createElement(_ListColumn.default, null, ids.map(function (id) {
+    return _react.default.createElement(_SongCard.default, {
+      key: id,
+      id: id
+    });
+  })));
+};
+
+var _default = Songs;
+exports.default = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9rZWlzdWtla2lkby9wcm9qZWN0cy9pdHVuZXNGZXRjaGVyL3NyYy9jb21wb25lbnRzL1NjcmVlbnMvU2VhcmNoL1BhcnRzL1Jlc3VsdHMvU29uZ3MvaW5kZXgudHN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFBQTs7QUFDQTs7QUFDQTs7QUFDQTs7QUFDQTs7QUFDQTs7QUFDQTs7QUFDQTs7QUFNQSxJQUFNLEtBQUssR0FBMEIsU0FBL0IsS0FBK0I7QUFBQSxNQUNuQyxHQURtQyxRQUNuQyxHQURtQztBQUFBLFNBR25DLGVBQUEsYUFBQSxDQUFDLGdCQUFELEVBQVEsSUFBUixFQUNFLGVBQUEsYUFBQSxDQUFDLHNCQUFELEVBQWMsSUFBZCxFQUNFLGVBQUEsYUFBQSxDQUFDLGdCQUFELEVBQVE7QUFBQyxJQUFBLEtBQUssRUFBRTtBQUFSLEdBQVIsRUFBaUIsT0FBakIsQ0FERixFQUlFLGVBQUEsYUFBQSxDQUFDLGFBQUQsRUFBSztBQUFDLElBQUEsRUFBRSxFQUFFLHFDQUF3QjtBQUE3QixHQUFMLEVBQXNDLFlBQXRDLENBSkYsQ0FERixFQVNFLGVBQUEsYUFBQSxDQUFDLG1CQUFELEVBQVcsSUFBWCxFQUNHLEdBQUcsQ0FBQyxHQUFKLENBQVEsVUFBQSxFQUFFO0FBQUEsV0FBSSxlQUFBLGFBQUEsQ0FBQyxpQkFBRCxFQUFTO0FBQUMsTUFBQSxHQUFHLEVBQUUsRUFBTjtBQUFVLE1BQUEsRUFBRSxFQUFFO0FBQWQsS0FBVCxDQUFKO0FBQUEsR0FBVixDQURILENBVEYsQ0FIbUM7QUFBQSxDQUFyQzs7ZUFrQmUsSyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQgeyBOQVZJR0FUSU9OX1NFQVJDSF9TT05HUyB9IGZyb20gJ3JvdXRlcy9uYXZpZ2F0aW9ucyc7XG5pbXBvcnQgTGluayBmcm9tICdjb21wb25lbnRzL1NoYXJlZC9MaW5rJztcbmltcG9ydCBIZWFkaW5nIGZyb20gJ2NvbXBvbmVudHMvU2hhcmVkL0hlYWRpbmcnO1xuaW1wb3J0IFNlY3Rpb24gZnJvbSAnY29tcG9uZW50cy9TaGFyZWQvU2VjdGlvbic7XG5pbXBvcnQgU2VjdGlvbkhlYWRlciBmcm9tICdjb21wb25lbnRzL1NoYXJlZC9TZWN0aW9uSGVhZGVyJztcbmltcG9ydCBMaXN0Q29sdW1uIGZyb20gJ2NvbXBvbmVudHMvU2hhcmVkL0xpc3RDb2x1bW4nO1xuaW1wb3J0IFNvbmdDYXJkIGZyb20gJ2NvbnRhaW5lcnMvU2NyZWVucy9TZWFyY2gvUGFydHMvUmVzdWx0cy9Tb25nQ2FyZCc7XG5cbnR5cGUgU29uZ3NQcm9wcyA9IHtcbiAgaWRzOiBzdHJpbmdbXTtcbn07XG5cbmNvbnN0IFNvbmdzOiBSZWFjdC5TRkM8U29uZ3NQcm9wcz4gPSAoe1xuICBpZHMsXG59KSA9PiAoXG4gIDxTZWN0aW9uPlxuICAgIDxTZWN0aW9uSGVhZGVyPlxuICAgICAgPEhlYWRpbmcgbGV2ZWw9ezN9PlxuICAgICAgICBTb25nc1xuICAgICAgPC9IZWFkaW5nPlxuICAgICAgPExpbmsgdG89e05BVklHQVRJT05fU0VBUkNIX1NPTkdTLm5hbWV9PlxuICAgICAgICBTZWUgQWxsLi4uXG4gICAgICA8L0xpbms+XG4gICAgPC9TZWN0aW9uSGVhZGVyPlxuICAgIDxMaXN0Q29sdW1uPlxuICAgICAge2lkcy5tYXAoaWQgPT4gPFNvbmdDYXJkIGtleT17aWR9IGlkPXtpZH0gLz4pfVxuICAgIDwvTGlzdENvbHVtbj5cbiAgPC9TZWN0aW9uPlxuKTtcblxuZXhwb3J0IGRlZmF1bHQgU29uZ3M7XG4iXX0=

@@ -1,0 +1,25 @@
+9c52ffb84b3428c963f18581827433c9
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
+var _styles = _interopRequireDefault(require("./styles"));
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactNative = require("react-native");
+
+var Loading = function Loading(props) {
+  return _react.default.createElement(_reactNative.ActivityIndicator, (0, _extends2.default)({}, props, {
+    style: _reactNative.StyleSheet.flatten([props.style, _styles.default.base])
+  }));
+};
+
+var _default = Loading;
+exports.default = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9rZWlzdWtla2lkby9wcm9qZWN0cy9pdHVuZXNGZXRjaGVyL3NyYy9jb21wb25lbnRzL1NoYXJlZC9Mb2FkaW5nL2luZGV4LnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7QUFBQTs7QUFDQTs7QUFDQTs7QUFNQSxJQUFNLE9BQU8sR0FBNEIsU0FBbkMsT0FBbUMsQ0FBQyxLQUFEO0FBQUEsU0FDdkMsZUFBQSxhQUFBLENBQUMsOEJBQUQsRUFBa0IsdUJBQUEsRUFBQSxFQUNaLEtBRFksRUFDUDtBQUNULElBQUEsS0FBSyxFQUFFLHdCQUFXLE9BQVgsQ0FBbUIsQ0FBQyxLQUFLLENBQUMsS0FBUCxFQUFjLGdCQUFPLElBQXJCLENBQW5CO0FBREUsR0FETyxDQUFsQixDQUR1QztBQUFBLENBQXpDOztlQU9lLE8iLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgc3R5bGVzIGZyb20gJy4vc3R5bGVzJztcbmltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQgeyBBY3Rpdml0eUluZGljYXRvciwgU3R5bGVTaGVldCB9IGZyb20gJ3JlYWN0LW5hdGl2ZSc7XG5cbmV4cG9ydCB0eXBlIExvYWRpbmdQcm9wcyA9IChcbiAgQWN0aXZpdHlJbmRpY2F0b3JbJ3Byb3BzJ11cbik7XG5cbmNvbnN0IExvYWRpbmc6IFJlYWN0LlNGQzxMb2FkaW5nUHJvcHM+ID0gKHByb3BzKSA9PiAoXG4gIDxBY3Rpdml0eUluZGljYXRvclxuICAgIHsuLi5wcm9wc31cbiAgICBzdHlsZT17U3R5bGVTaGVldC5mbGF0dGVuKFtwcm9wcy5zdHlsZSwgc3R5bGVzLmJhc2VdKX1cbiAgLz5cbik7XG5cbmV4cG9ydCBkZWZhdWx0IExvYWRpbmc7XG4iXX0=

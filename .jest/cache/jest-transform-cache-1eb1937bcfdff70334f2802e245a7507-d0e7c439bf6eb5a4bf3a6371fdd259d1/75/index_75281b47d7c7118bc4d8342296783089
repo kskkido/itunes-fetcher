@@ -1,0 +1,31 @@
+3cef7b41b78fb41a8b0989e10dcffd9a
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _AsyncSearchContainer = _interopRequireDefault(require("../../../containers/Screens/Search/Parts/AsyncSearchContainer"));
+
+var _SearchForm = _interopRequireDefault(require("../../../containers/Screens/Search/Parts/Forms/SearchForm"));
+
+var _Albums = _interopRequireDefault(require("../../../containers/Screens/Search/Parts/Results/Albums"));
+
+var _Applications = _interopRequireDefault(require("../../../containers/Screens/Search/Parts/Results/Applications"));
+
+var _Songs = _interopRequireDefault(require("../../../containers/Screens/Search/Parts/Results/Songs"));
+
+var _ScreenContainer = _interopRequireDefault(require("../../Shared/Layouts/ScreenContainer"));
+
+var _Section = _interopRequireDefault(require("../../Shared/Section"));
+
+var Search = function Search() {
+  return _react.default.createElement(_ScreenContainer.default, null, _react.default.createElement(_Section.default, null, _react.default.createElement(_SearchForm.default, null)), _react.default.createElement(_AsyncSearchContainer.default, null, _react.default.createElement(_Songs.default, null), _react.default.createElement(_Albums.default, null), _react.default.createElement(_Applications.default, null)));
+};
+
+var _default = Search;
+exports.default = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9rZWlzdWtla2lkby9wcm9qZWN0cy9pdHVuZXNGZXRjaGVyL3NyYy9jb21wb25lbnRzL1NjcmVlbnMvU2VhcmNoL2luZGV4LnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7O0FBQUE7O0FBQ0E7O0FBQ0E7O0FBQ0E7O0FBQ0E7O0FBQ0E7O0FBQ0E7O0FBQ0E7O0FBRUEsSUFBTSxNQUFNLEdBQWMsU0FBcEIsTUFBb0I7QUFBQSxTQUN4QixlQUFBLGFBQUEsQ0FBQyx3QkFBRCxFQUFnQixJQUFoQixFQUNFLGVBQUEsYUFBQSxDQUFDLGdCQUFELEVBQVEsSUFBUixFQUNFLGVBQUEsYUFBQSxDQUFDLG1CQUFELEVBQVcsSUFBWCxDQURGLENBREYsRUFJRSxlQUFBLGFBQUEsQ0FBQyw2QkFBRCxFQUFxQixJQUFyQixFQUNFLGVBQUEsYUFBQSxDQUFDLGNBQUQsRUFBTSxJQUFOLENBREYsRUFFRSxlQUFBLGFBQUEsQ0FBQyxlQUFELEVBQU8sSUFBUCxDQUZGLEVBR0UsZUFBQSxhQUFBLENBQUMscUJBQUQsRUFBYSxJQUFiLENBSEYsQ0FKRixDQUR3QjtBQUFBLENBQTFCOztlQWFlLE0iLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnO1xuaW1wb3J0IEFzeW5jU2VhcmNoQ29udGFpbmVyIGZyb20gJ2NvbnRhaW5lcnMvU2NyZWVucy9TZWFyY2gvUGFydHMvQXN5bmNTZWFyY2hDb250YWluZXInO1xuaW1wb3J0IFNlYXJjaEZvcm0gZnJvbSAnY29udGFpbmVycy9TY3JlZW5zL1NlYXJjaC9QYXJ0cy9Gb3Jtcy9TZWFyY2hGb3JtJztcbmltcG9ydCBBbGJ1bXMgZnJvbSAnY29udGFpbmVycy9TY3JlZW5zL1NlYXJjaC9QYXJ0cy9SZXN1bHRzL0FsYnVtcyc7XG5pbXBvcnQgQXBwbGljYXRpb25zIGZyb20gJ2NvbnRhaW5lcnMvU2NyZWVucy9TZWFyY2gvUGFydHMvUmVzdWx0cy9BcHBsaWNhdGlvbnMnO1xuaW1wb3J0IFNvbmdzIGZyb20gJ2NvbnRhaW5lcnMvU2NyZWVucy9TZWFyY2gvUGFydHMvUmVzdWx0cy9Tb25ncyc7XG5pbXBvcnQgU2NyZWVuQ29udGFpbmVyIGZyb20gJ2NvbXBvbmVudHMvU2hhcmVkL0xheW91dHMvU2NyZWVuQ29udGFpbmVyJztcbmltcG9ydCBTZWN0aW9uIGZyb20gJ2NvbXBvbmVudHMvU2hhcmVkL1NlY3Rpb24nO1xuXG5jb25zdCBTZWFyY2g6IFJlYWN0LlNGQyA9ICgpID0+IChcbiAgPFNjcmVlbkNvbnRhaW5lcj5cbiAgICA8U2VjdGlvbj5cbiAgICAgIDxTZWFyY2hGb3JtIC8+XG4gICAgPC9TZWN0aW9uPlxuICAgIDxBc3luY1NlYXJjaENvbnRhaW5lcj5cbiAgICAgIDxTb25ncyAvPlxuICAgICAgPEFsYnVtcyAvPlxuICAgICAgPEFwcGxpY2F0aW9ucyAvPlxuICAgIDwvQXN5bmNTZWFyY2hDb250YWluZXI+XG4gIDwvU2NyZWVuQ29udGFpbmVyPlxuKTtcblxuZXhwb3J0IGRlZmF1bHQgU2VhcmNoO1xuIl19

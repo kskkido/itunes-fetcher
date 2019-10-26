@@ -1,0 +1,19 @@
+436afb790c9c94665903ac2e886f60a4
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.scale = void 0;
+
+var _reactNative = require("react-native");
+
+var R = _interopRequireWildcard(require("ramda"));
+
+var scale = R.compose(R.cond([[R.always(_reactNative.Platform.OS === 'ios'), function (size) {
+  return Math.round(_reactNative.PixelRatio.roundToNearestPixel(size));
+}], [R.T, function (size) {
+  return Math.round(_reactNative.PixelRatio.roundToNearestPixel(size)) - 2;
+}]]), R.multiply(_reactNative.Dimensions.get('window').width / 320));
+exports.scale = scale;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9rZWlzdWtla2lkby9wcm9qZWN0cy9pdHVuZXNGZXRjaGVyL3NyYy91dGlscy92aWV3cG9ydC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7O0FBQUE7O0FBQ0E7O0FBRU8sSUFBTSxLQUFLLEdBQUcsQ0FBQyxDQUFDLE9BQUYsQ0FDbkIsQ0FBQyxDQUFDLElBQUYsQ0FBTyxDQUNMLENBQUMsQ0FBQyxDQUFDLE1BQUYsQ0FBUyxzQkFBUyxFQUFULEtBQWdCLEtBQXpCLENBQUQsRUFBa0MsVUFBQSxJQUFJO0FBQUEsU0FBSSxJQUFJLENBQUMsS0FBTCxDQUFXLHdCQUFXLG1CQUFYLENBQStCLElBQS9CLENBQVgsQ0FBSjtBQUFBLENBQXRDLENBREssRUFFTCxDQUFDLENBQUMsQ0FBQyxDQUFILEVBQU0sVUFBQSxJQUFJO0FBQUEsU0FBSSxJQUFJLENBQUMsS0FBTCxDQUFXLHdCQUFXLG1CQUFYLENBQStCLElBQS9CLENBQVgsSUFBbUQsQ0FBdkQ7QUFBQSxDQUFWLENBRkssQ0FBUCxDQURtQixFQUtuQixDQUFDLENBQUMsUUFBRixDQUFXLHdCQUFXLEdBQVgsQ0FBZSxRQUFmLEVBQXlCLEtBQXpCLEdBQWlDLEdBQTVDLENBTG1CLENBQWQiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBEaW1lbnNpb25zLCBQbGF0Zm9ybSwgUGl4ZWxSYXRpbyB9IGZyb20gJ3JlYWN0LW5hdGl2ZSc7XG5pbXBvcnQgKiBhcyBSIGZyb20gJ3JhbWRhJztcblxuZXhwb3J0IGNvbnN0IHNjYWxlID0gUi5jb21wb3NlKFxuICBSLmNvbmQoW1xuICAgIFtSLmFsd2F5cyhQbGF0Zm9ybS5PUyA9PT0gJ2lvcycpLCBzaXplID0+IE1hdGgucm91bmQoUGl4ZWxSYXRpby5yb3VuZFRvTmVhcmVzdFBpeGVsKHNpemUpKV0sXG4gICAgW1IuVCwgc2l6ZSA9PiBNYXRoLnJvdW5kKFBpeGVsUmF0aW8ucm91bmRUb05lYXJlc3RQaXhlbChzaXplKSkgLSAyXSxcbiAgXSksXG4gIFIubXVsdGlwbHkoRGltZW5zaW9ucy5nZXQoJ3dpbmRvdycpLndpZHRoIC8gMzIwKVxuKTtcbiJdfQ==
