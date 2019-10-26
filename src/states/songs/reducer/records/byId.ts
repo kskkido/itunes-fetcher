@@ -8,7 +8,7 @@ export type ByIdState = (
 
 export const byIdReducer = createReducer<ByIdState>({})
   .case(
-    actions.songsReceive,
+    actions.receive,
     (_, payload) => (
       payload.results.reduce(
         (acc, result) => (acc[`${result.trackId}`] = result, acc),

@@ -9,14 +9,14 @@ export type RequestState = {
 
 export const requestReducer = createReducer<RequestState>({ status: 'unsent' })
   .case(
-    actions.applicationsFetchLoading,
+    actions.fetchLoading,
     () => ({ status: 'loading' })
   )
   .case(
-    actions.applicationsFetchSuccess,
+    actions.fetchSuccess,
     () => ({ status: 'success' })
   )
   .case(
-    actions.applicationsFetchFailure,
+    actions.fetchFailure,
     (_, payload) => ({ status: 'error', error: payload })
   );

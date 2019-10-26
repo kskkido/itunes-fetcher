@@ -1,10 +1,12 @@
-import * as songsTypes from 'api/songs/types';
+import { GetParams, GetPayload } from 'api/songs/types';
 import { FormattedRequestError } from 'types/request';
-import { createActionCreator } from 'states/utils/action';
+import { createPrefixedActionCreator } from 'states/utils/action';
 
-export const songsFetch = createActionCreator<songsTypes.GetParams>('songsFetch');
-export const songsFetchLoading = createActionCreator('songsFetchLoading');
-export const songsFetchSuccess = createActionCreator('songsFetchSuccess');
-export const songsFetchFailure = createActionCreator<FormattedRequestError>('songsFetchFailure');
-export const songsReceive = createActionCreator<songsTypes.GetPayload>('songsReceive');
-export const songsClear = createActionCreator('songsClear');
+const createActionCreator = createPrefixedActionCreator('songs');
+
+export const fetch = createActionCreator<GetParams>('fetch');
+export const fetchLoading = createActionCreator('fetchLoading');
+export const fetchSuccess = createActionCreator('fetchSuccess');
+export const fetchFailure = createActionCreator<FormattedRequestError>('fetchFailure');
+export const receive = createActionCreator<GetPayload>('receive');
+export const clear = createActionCreator('clear');

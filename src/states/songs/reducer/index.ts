@@ -1,5 +1,5 @@
 import { combineReducers, asClearableReducer } from 'states/utils/reducer';
-import { songsClear } from 'states/songs/actions';
+import { clear } from 'states/songs/actions';
 import { recordsReducer, RecordsState } from './records';
 import { requestReducer, RequestState } from './request';
 
@@ -13,5 +13,5 @@ export const songsReducer = asClearableReducer(
     records: recordsReducer,
     request: requestReducer,
   }),
-  songsClear.type
+  clear.type
 );

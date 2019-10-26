@@ -14,9 +14,9 @@ const SearchForm: React.SFC = () => {
       <SearchFormComponent
         onSubmit={useCallback(
           ({ search: term }) => {
-            dispatch(albumsActions.albumsFetch({ term }));
-            dispatch(applicationsActions.applicationsFetch({ term }));
-            dispatch(songsActions.songsFetch({ term }));
+            dispatch(albumsActions.fetch({ term }));
+            dispatch(applicationsActions.fetch({ term }));
+            dispatch(songsActions.fetch({ term }));
           },
           [dispatch]
         )}

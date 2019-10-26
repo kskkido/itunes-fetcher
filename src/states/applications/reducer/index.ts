@@ -1,5 +1,5 @@
 import { combineReducers, asClearableReducer } from 'states/utils/reducer';
-import { applicationsClear } from 'states/applications/actions';
+import { clear } from 'states/applications/actions';
 import { recordsReducer, RecordsState } from './records';
 import { requestReducer, RequestState } from './request';
 
@@ -13,5 +13,5 @@ export const applicationsReducer = asClearableReducer(
     records: recordsReducer,
     request: requestReducer,
   }),
-  applicationsClear.type
+  clear.type
 );

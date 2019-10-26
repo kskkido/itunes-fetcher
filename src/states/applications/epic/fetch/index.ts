@@ -5,36 +5,34 @@ import { RequestError } from 'types/request';
 import { parseRequestError } from 'utils/request/error';
 import { isActionOf } from 'states/utils/action';
 import { RootState } from 'states/root/reducer';
-import { RootActions } from 'states/root/actions';
 import * as actions from 'states/applications/actions';
 import search from 'api/applications';
 
 type Actions = ActionsOf<typeof actions>;
 
 export const fetchEpic: Epic<
-  RootActions,
+  Actions,
   Actions,
   RootState
 > = action$ => (
   action$
-    .filter(isActionOf(actions.applicationsFetch))
+    .filter(isActionOf(actions.fetch))
     .mergeMap(({ payload }) => (
       Rx.Observable.concat<Actions>(
-        Rx.Observable.of(actions.applicationsFetchLoading()),
+        Rx.Observable.of(actions.fetchLoading()),
         Rx.Observable.fromPromise(search.get(payload))
           .mergeMap(response => (
             Rx.Observable.concat<Actions>(
-              Rx.Observable.of(actions.applicationsReceive(response)),
-              Rx.Observable.of(actions.applicationsFetchSuccess())
+              Rx.Observable.of(actions.receive(response)),
+              Rx.Observable.of(actions.fetchSuccess())
             )
           ))
           .catch((requestError: RequestError) => (
             Rx.Observable.fromPromise(parseRequestError(requestError)
-              .then(error => actions.applicationsFetchFailure(error))
-              .catch(error => actions.applicationsFetchFailure(error))
+              .then(error => actions.fetchFailure(error))
+              .catch(error => actions.fetchFailure(error))
             )
           ))
       )
     ))
 );
-

@@ -17,9 +17,9 @@ const setup = () => ({
       batchedActionsReducer(
         {},
         [
-          albumsActions.albumsReceive(albumsGetMock.payload),
-          applicationsActions.applicationsReceive(applicationsGetMock.payload),
-          songsActions.songsReceive(songsGetMock.payload),
+          albumsActions.receive(albumsGetMock.payload),
+          applicationsActions.receive(applicationsGetMock.payload),
+          songsActions.receive(songsGetMock.payload),
         ]
       )}>
       <Search />

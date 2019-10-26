@@ -1,10 +1,12 @@
-import * as applicationsTypes from 'api/applications/types';
+import { GetParams, GetPayload } from 'api/applications/types';
 import { FormattedRequestError } from 'types/request';
-import { createActionCreator } from 'states/utils/action';
+import { createPrefixedActionCreator } from 'states/utils/action';
 
-export const applicationsFetch = createActionCreator<applicationsTypes.GetParams>('applicationsFetch');
-export const applicationsFetchLoading = createActionCreator('applicationsFetchLoading');
-export const applicationsFetchSuccess = createActionCreator('applicationsFetchSuccess');
-export const applicationsFetchFailure = createActionCreator<FormattedRequestError>('applicationsFetchFailure');
-export const applicationsReceive = createActionCreator<applicationsTypes.GetPayload>('applicationsReceive');
-export const applicationsClear = createActionCreator('applicationsResultsClear');
+const createActionCreator = createPrefixedActionCreator('applications');
+
+export const fetch = createActionCreator<GetParams>('fetch');
+export const fetchLoading = createActionCreator('fetchLoading');
+export const fetchSuccess = createActionCreator('fetchSuccess');
+export const fetchFailure = createActionCreator<FormattedRequestError>('fetchFailure');
+export const receive = createActionCreator<GetPayload>('receive');
+export const clear = createActionCreator('clear');

@@ -3,7 +3,7 @@ import React from 'react';
 import TestRenderer from 'react-test-renderer';
 import StoreProvider from '_tests/utils/Providers/StoreProvider';
 import { payload } from 'api/albums/_mocks/get';
-import { albumsReceive } from 'states/albums/actions';
+import { receive } from 'states/albums/actions';
 import { batchedActionsReducer } from '_tests/utils/states/reducer';
 import Albums from '../';
 
@@ -12,7 +12,7 @@ const setup = () => ({
     <StoreProvider
       state={batchedActionsReducer(
         {},
-        [albumsReceive(payload)]
+        [receive(payload)]
       )}>
       <Albums />
     </StoreProvider>
