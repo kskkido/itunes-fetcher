@@ -1,0 +1,28 @@
+5469b9bdfa6d9b9bb86f68466d489823
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
+
+var _reactNavigationTabs = require("react-navigation-tabs");
+
+var navigations = _interopRequireWildcard(require("../../routes/navigations"));
+
+var _Home = _interopRequireDefault(require("./Home"));
+
+var _Search = _interopRequireDefault(require("./Search"));
+
+var _createBottomTabNavig;
+
+var Routes = (0, _reactNavigationTabs.createBottomTabNavigator)((_createBottomTabNavig = {}, (0, _defineProperty2.default)(_createBottomTabNavig, navigations.NAVIGATION_HOME.name, _Home.default), (0, _defineProperty2.default)(_createBottomTabNavig, navigations.NAVIGATION_SEARCH.name, _Search.default), _createBottomTabNavig), {
+  initialRouteName: navigations.NAVIGATION_SEARCH.name
+});
+var _default = Routes;
+exports.default = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9rZWlzdWtla2lkby9wcm9qZWN0cy9pdHVuZXNGZXRjaGVyL3NyYy9jb250YWluZXJzL1JvdXRlcy9pbmRleC50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7QUFBQTs7QUFDQTs7QUFDQTs7QUFDQTs7OztBQUVBLElBQU0sTUFBTSxHQUFHLHFJQUVWLFdBQVcsQ0FBQyxlQUFaLENBQTRCLElBRmxCLEVBRXlCLGFBRnpCLHdEQUdWLFdBQVcsQ0FBQyxpQkFBWixDQUE4QixJQUhwQixFQUcyQixlQUgzQiwyQkFLYjtBQUNFLEVBQUEsZ0JBQWdCLEVBQUUsV0FBVyxDQUFDLGlCQUFaLENBQThCO0FBRGxELENBTGEsQ0FBZjtlQVVlLE0iLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBjcmVhdGVCb3R0b21UYWJOYXZpZ2F0b3IgfSBmcm9tICdyZWFjdC1uYXZpZ2F0aW9uLXRhYnMnO1xuaW1wb3J0ICogYXMgbmF2aWdhdGlvbnMgZnJvbSAncm91dGVzL25hdmlnYXRpb25zJztcbmltcG9ydCBIb21lIGZyb20gJy4vSG9tZSc7XG5pbXBvcnQgU2VhcmNoIGZyb20gJy4vU2VhcmNoJztcblxuY29uc3QgUm91dGVzID0gY3JlYXRlQm90dG9tVGFiTmF2aWdhdG9yKFxuICB7XG4gICAgW25hdmlnYXRpb25zLk5BVklHQVRJT05fSE9NRS5uYW1lXTogSG9tZSxcbiAgICBbbmF2aWdhdGlvbnMuTkFWSUdBVElPTl9TRUFSQ0gubmFtZV06IFNlYXJjaCxcbiAgfSxcbiAge1xuICAgIGluaXRpYWxSb3V0ZU5hbWU6IG5hdmlnYXRpb25zLk5BVklHQVRJT05fU0VBUkNILm5hbWUsXG4gIH1cbik7XG5cbmV4cG9ydCBkZWZhdWx0IFJvdXRlcztcbiJdfQ==

@@ -1,0 +1,24 @@
+71c6c8a89feb88f0fca8beebd8f73ebb
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.parseQueryString = exports.createQueryString = void 0;
+
+var _queryString = _interopRequireDefault(require("query-string"));
+
+var _ramda = require("ramda");
+
+var createQueryString = function createQueryString(obj) {
+  return (0, _ramda.isEmpty)(obj) || obj === undefined ? '' : "?" + _queryString.default.stringify(obj);
+};
+
+exports.createQueryString = createQueryString;
+
+var parseQueryString = function parseQueryString(query) {
+  return _queryString.default.parse(query);
+};
+
+exports.parseQueryString = parseQueryString;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9rZWlzdWtla2lkby9wcm9qZWN0cy9pdHVuZXNGZXRjaGVyL3NyYy91dGlscy9xdWVyeVN0cmluZy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7O0FBQUE7O0FBQ0E7O0FBRU8sSUFBTSxpQkFBaUIsR0FBRyxTQUFwQixpQkFBb0IsQ0FBQyxHQUFEO0FBQUEsU0FDL0Isb0JBQVEsR0FBUixLQUFnQixHQUFHLEtBQUssU0FBeEIsR0FDSSxFQURKLFNBRVEscUJBQVksU0FBWixDQUFzQixHQUF0QixDQUh1QjtBQUFBLENBQTFCOzs7O0FBTUEsSUFBTSxnQkFBZ0IsR0FBRyxTQUFuQixnQkFBbUIsQ0FBZSxLQUFmO0FBQUEsU0FDOUIscUJBQVksS0FBWixDQUFrQixLQUFsQixDQUQ4QjtBQUFBLENBQXpCIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHF1ZXJ5U3RyaW5nIGZyb20gJ3F1ZXJ5LXN0cmluZyc7XG5pbXBvcnQgeyBpc0VtcHR5IH0gZnJvbSAncmFtZGEnO1xuXG5leHBvcnQgY29uc3QgY3JlYXRlUXVlcnlTdHJpbmcgPSAob2JqPzogUmVjb3JkPHN0cmluZywgYW55Pik6IHN0cmluZyA9PiAoXG4gIGlzRW1wdHkob2JqKSB8fCBvYmogPT09IHVuZGVmaW5lZFxuICAgID8gJydcbiAgICA6IGA/JHtxdWVyeVN0cmluZy5zdHJpbmdpZnkob2JqKX1gXG4pO1xuXG5leHBvcnQgY29uc3QgcGFyc2VRdWVyeVN0cmluZyA9IDxPIGV4dGVuZHMge30+KHF1ZXJ5OiBzdHJpbmcpOiBPID0+IChcbiAgcXVlcnlTdHJpbmcucGFyc2UocXVlcnkpIGFzIE9cbik7XG4iXX0=

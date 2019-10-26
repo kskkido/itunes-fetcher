@@ -1,0 +1,47 @@
+b5d74c9296b64e7165377e363c5e854b
+"use strict";var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");Object.defineProperty(exports, "__esModule", { value: true });exports.createAnimatedCall = createAnimatedCall;var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));var _get2 = _interopRequireDefault(require("@babel/runtime/helpers/get"));var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));var _ReanimatedEventEmitter = _interopRequireDefault(require("../ReanimatedEventEmitter"));
+var _val = require("../val");
+var _AnimatedNode = _interopRequireDefault(require("./AnimatedNode"));
+
+var NODE_MAPPING = new Map();
+
+function listener(data) {
+  var node = NODE_MAPPING.get(data.id);
+  node && node._callback(data.args);
+}var
+
+AnimatedCall = function (_AnimatedNode) {(0, _inherits2.default)(AnimatedCall, _AnimatedNode);
+
+
+
+  function AnimatedCall(args, jsFunction) {var _this;(0, _classCallCheck2.default)(this, AnimatedCall);
+    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(AnimatedCall).call(this, { type: 'call', input: args.map(function (n) {return n.__nodeID;}) }, args));
+    _this._callback = jsFunction;
+    _this._args = args;return _this;
+  }(0, _createClass2.default)(AnimatedCall, [{ key: "__attach", value: function __attach()
+
+    {
+      (0, _get2.default)((0, _getPrototypeOf2.default)(AnimatedCall.prototype), "__attach", this).call(this);
+      NODE_MAPPING.set(this.__nodeID, this);
+      if (NODE_MAPPING.size === 1) {
+        _ReanimatedEventEmitter.default.addListener('onReanimatedCall', listener);
+      }
+    } }, { key: "__detach", value: function __detach()
+
+    {
+      NODE_MAPPING.delete(this.__nodeID);
+      if (NODE_MAPPING.size === 0) {
+        _ReanimatedEventEmitter.default.removeAllListeners('onReanimatedCall');
+      }
+      (0, _get2.default)((0, _getPrototypeOf2.default)(AnimatedCall.prototype), "__detach", this).call(this);
+    } }, { key: "__onEvaluate", value: function __onEvaluate()
+
+    {
+      this._callback(this._args.map(_val.val));
+      return 0;
+    } }]);return AnimatedCall;}(_AnimatedNode.default);
+
+
+function createAnimatedCall(args, func) {
+  return new AnimatedCall(args, func);
+}

@@ -1,0 +1,36 @@
+f267363db6acc64c0b20e80d57f40b1d
+"use strict";var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");Object.defineProperty(exports, "__esModule", { value: true });exports.evaluateOnce = evaluateOnce;var _InternalAnimatedValue = _interopRequireDefault(require("../core/InternalAnimatedValue"));
+var _AnimatedSet = require("../core/AnimatedSet");
+var _AnimatedCall = require("../core/AnimatedCall");
+var _AnimatedAlways = require("../core/AnimatedAlways");
+var _AnimatedCond = require("../core/AnimatedCond");
+
+
+
+
+
+
+
+
+function evaluateOnce(node) {var input = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];var callback = arguments.length > 2 ? arguments[2] : undefined;
+  if (!Array.isArray(input)) {
+    input = [input];
+  }
+  var done = new _InternalAnimatedValue.default(0);
+  var evalNode = (0, _AnimatedCond.createAnimatedCond)(
+  done,
+  0,
+  (0, _AnimatedCall.createAnimatedCall)([node, (0, _AnimatedSet.createAnimatedSet)(done, 1)], function () {
+    callback && callback();
+    for (var i = 0; i < input.length; i++) {
+      input[i].__removeChild(alwaysNode);
+      alwaysNode.__detach();
+    }
+  }));
+
+  var alwaysNode = (0, _AnimatedAlways.createAnimatedAlways)(evalNode);
+  for (var i = 0; i < input.length; i++) {
+    input[i].__addChild(alwaysNode);
+    alwaysNode.__attach();
+  }
+}

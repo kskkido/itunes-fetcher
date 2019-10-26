@@ -1,0 +1,5 @@
+52a57815ce5ec7b6e4c3bfe06099732e
+"use strict";var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _ReanimatedModule = _interopRequireDefault(require("./ReanimatedModule"));
+var _reactNative = require("react-native");var _default =
+
+new _reactNative.NativeEventEmitter(_ReanimatedModule.default);exports.default = _default;

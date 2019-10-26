@@ -1,0 +1,17 @@
+e5dccbf6bb0e8ef741cfd2f140ce180b
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.rootEpic = void 0;
+
+var _reduxObservable = require("redux-observable");
+
+var _epic = require("../../albums/epic");
+
+var _epic2 = require("../../applications/epic");
+
+var _epic3 = require("../../songs/epic");
+
+var rootEpic = (0, _reduxObservable.combineEpics)(_epic.albumsEpic, _epic2.applicationsEpic, _epic3.songsEpic);
+exports.rootEpic = rootEpic;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9rZWlzdWtla2lkby9wcm9qZWN0cy9pdHVuZXNGZXRjaGVyL3NyYy9zdGF0ZXMvcm9vdC9lcGljL2luZGV4LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7O0FBQUE7O0FBQ0E7O0FBQ0E7O0FBQ0E7O0FBRU8sSUFBTSxRQUFRLEdBQUcsbUNBQ3RCLGdCQURzQixFQUV0Qix1QkFGc0IsRUFHdEIsZ0JBSHNCLENBQWpCIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgY29tYmluZUVwaWNzIH0gZnJvbSAncmVkdXgtb2JzZXJ2YWJsZSc7XG5pbXBvcnQgeyBhbGJ1bXNFcGljIH0gZnJvbSAnc3RhdGVzL2FsYnVtcy9lcGljJztcbmltcG9ydCB7IGFwcGxpY2F0aW9uc0VwaWMgfSBmcm9tICdzdGF0ZXMvYXBwbGljYXRpb25zL2VwaWMnO1xuaW1wb3J0IHsgc29uZ3NFcGljIH0gZnJvbSAnc3RhdGVzL3NvbmdzL2VwaWMnO1xuXG5leHBvcnQgY29uc3Qgcm9vdEVwaWMgPSBjb21iaW5lRXBpY3MoXG4gIGFsYnVtc0VwaWMsXG4gIGFwcGxpY2F0aW9uc0VwaWMsXG4gIHNvbmdzRXBpYyBhcyBhbnkgLy8gZml4IHR5cGVcbik7XG4iXX0=

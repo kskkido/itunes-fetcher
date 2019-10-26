@@ -1,0 +1,16 @@
+6286e93cc60bf17aabd3dec658d42732
+"use strict";var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));var _AnimatedSet = require("../core/AnimatedSet");
+var _interpolate2 = _interopRequireDefault(require("../derived/interpolate"));
+var _InternalAnimatedValue = _interopRequireDefault(require("./InternalAnimatedValue"));
+var _evaluateOnce = require("../derived/evaluateOnce");var
+
+
+AnimatedValue = function (_InternalAnimatedValu) {(0, _inherits2.default)(AnimatedValue, _InternalAnimatedValu);function AnimatedValue() {(0, _classCallCheck2.default)(this, AnimatedValue);return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(AnimatedValue).apply(this, arguments));}(0, _createClass2.default)(AnimatedValue, [{ key: "setValue", value: function setValue(
+    value) {
+      this.__detachAnimation(this._animation);
+      (0, _evaluateOnce.evaluateOnce)((0, _AnimatedSet.createAnimatedSet)(this, value), this);
+    } }, { key: "interpolate", value: function interpolate(
+
+    config) {
+      return (0, _interpolate2.default)(this, config);
+    } }]);return AnimatedValue;}(_InternalAnimatedValue.default);exports.default = AnimatedValue;

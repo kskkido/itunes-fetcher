@@ -1,0 +1,10 @@
+1c3ee3f65d3f7a53fd9f7a14e5b692ad
+jest.mock('react-native-reanimated', function () {return (
+    'ReactNativeReanimated');});
+
+
+jest.mock('react-native-screens', function () {return (
+    'ReactNativeScreens');});
+
+
+jest.mock('react-native-gesture-handler', function () {return {};});

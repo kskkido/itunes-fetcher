@@ -1,0 +1,1 @@
+{"version":3,"sources":["/Users/keisukekido/projects/itunesFetcher/src/constants/urls.ts"],"names":[],"mappings":";;;;AAAO,IAAM,iBAAiB,GAAG,iCAA1B","sourcesContent":["export const ITUNES_SEARCH_API = 'https://itunes.apple.com/search';\n"]}

@@ -1,0 +1,44 @@
+5de174bbebcee06021819bcd1c17e068
+"use strict";var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");Object.defineProperty(exports, "__esModule", { value: true });exports.createAnimatedBlock = createAnimatedBlock;exports.adapt = adapt;var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));var _AnimatedNode = _interopRequireDefault(require("./AnimatedNode"));
+var _val = require("../val");
+var _InternalAnimatedValue = _interopRequireDefault(require("./InternalAnimatedValue"));var
+
+AnimatedBlock = function (_AnimatedNode) {(0, _inherits2.default)(AnimatedBlock, _AnimatedNode);
+
+
+  function AnimatedBlock(array) {var _this;(0, _classCallCheck2.default)(this, AnimatedBlock);
+    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(AnimatedBlock).call(this, { type: 'block', block: array.map(function (n) {return n.__nodeID;}) }, array));
+    _this._array = array;return _this;
+  }(0, _createClass2.default)(AnimatedBlock, [{ key: "__onEvaluate", value: function __onEvaluate()
+
+    {
+      var result;
+      this._array.forEach(function (node) {
+        result = (0, _val.val)(node);
+      });
+      return result;
+    } }]);return AnimatedBlock;}(_AnimatedNode.default);
+
+
+function createAnimatedBlock(items) {
+  return adapt(items);
+}
+
+function nodify(v) {
+  if (typeof v === 'object' && v.__isProxy) {
+    if (!v.__val) {
+      v.__val = new _InternalAnimatedValue.default(0);
+    }
+    return v.__val;
+  }
+
+  return v instanceof _AnimatedNode.default ?
+  v :
+  _InternalAnimatedValue.default.valueForConstant(v);
+}
+
+function adapt(v) {
+  return Array.isArray(v) ?
+  new AnimatedBlock(v.map(function (node) {return adapt(node);})) :
+  nodify(v);
+}

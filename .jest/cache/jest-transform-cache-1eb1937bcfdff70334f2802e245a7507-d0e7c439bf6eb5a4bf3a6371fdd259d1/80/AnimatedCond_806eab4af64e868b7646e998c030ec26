@@ -1,0 +1,41 @@
+cf547213a8dd7ec3c4e6a618a781239a
+"use strict";var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");Object.defineProperty(exports, "__esModule", { value: true });exports.createAnimatedCond = createAnimatedCond;var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));var _val = require("../val");
+var _AnimatedNode = _interopRequireDefault(require("./AnimatedNode"));
+var _AnimatedBlock = require("../core/AnimatedBlock");var
+
+AnimatedCond = function (_AnimatedNode) {(0, _inherits2.default)(AnimatedCond, _AnimatedNode);
+
+
+
+
+  function AnimatedCond(condition, ifBlock, elseBlock) {var _this;(0, _classCallCheck2.default)(this, AnimatedCond);
+    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(AnimatedCond).call(this,
+    {
+      type: 'cond',
+      cond: condition.__nodeID,
+      ifBlock: ifBlock.__nodeID,
+      elseBlock: elseBlock ? elseBlock.__nodeID : undefined },
+
+    [condition, ifBlock, elseBlock]));
+
+    _this._condition = condition;
+    _this._ifBlock = ifBlock;
+    _this._elseBlock = elseBlock;return _this;
+  }(0, _createClass2.default)(AnimatedCond, [{ key: "__onEvaluate", value: function __onEvaluate()
+
+    {
+      if ((0, _val.val)(this._condition)) {
+        return (0, _val.val)(this._ifBlock);
+      } else {
+        return this._elseBlock !== undefined ? (0, _val.val)(this._elseBlock) : undefined;
+      }
+    } }]);return AnimatedCond;}(_AnimatedNode.default);
+
+
+function createAnimatedCond(cond, ifBlock, elseBlock) {
+  return new AnimatedCond(
+  (0, _AnimatedBlock.adapt)(cond),
+  (0, _AnimatedBlock.adapt)(ifBlock),
+  elseBlock === undefined ? undefined : (0, _AnimatedBlock.adapt)(elseBlock));
+
+}

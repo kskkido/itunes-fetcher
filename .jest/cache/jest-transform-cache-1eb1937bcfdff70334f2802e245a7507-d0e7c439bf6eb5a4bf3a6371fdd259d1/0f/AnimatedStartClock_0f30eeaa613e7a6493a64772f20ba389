@@ -1,0 +1,26 @@
+cf2a307e0b4efa16a8fa1dc206dd1447
+"use strict";var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");Object.defineProperty(exports, "__esModule", { value: true });exports.createAnimatedStartClock = createAnimatedStartClock;var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));var _AnimatedNode = _interopRequireDefault(require("./AnimatedNode"));
+var _AnimatedClock = _interopRequireDefault(require("./AnimatedClock"));
+var _invariant = _interopRequireDefault(require("fbjs/lib/invariant"));var
+
+AnimatedStartClock = function (_AnimatedNode) {(0, _inherits2.default)(AnimatedStartClock, _AnimatedNode);
+
+
+  function AnimatedStartClock(clockNode) {var _this;(0, _classCallCheck2.default)(this, AnimatedStartClock);
+    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(AnimatedStartClock).call(this, { type: 'clockStart', clock: clockNode.__nodeID }));
+    (0, _invariant.default)(
+    clockNode instanceof _AnimatedClock.default,
+    'Node is not of an AnimatedClock type');
+
+    _this._clockNode = clockNode;return _this;
+  }(0, _createClass2.default)(AnimatedStartClock, [{ key: "__onEvaluate", value: function __onEvaluate()
+
+    {
+      this._clockNode.start();
+      return 0;
+    } }]);return AnimatedStartClock;}(_AnimatedNode.default);
+
+
+function createAnimatedStartClock(clock) {
+  return new AnimatedStartClock(clock);
+}

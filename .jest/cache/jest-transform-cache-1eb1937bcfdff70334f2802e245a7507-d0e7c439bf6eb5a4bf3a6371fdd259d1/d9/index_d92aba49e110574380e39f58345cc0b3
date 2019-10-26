@@ -1,0 +1,13 @@
+e49c3b0c9ad95ab7170775a1ce3f1a5c
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.albumsEpic = void 0;
+
+var _reduxObservable = require("redux-observable");
+
+var _fetch = require("./fetch");
+
+var albumsEpic = (0, _reduxObservable.combineEpics)(_fetch.fetchEpic);
+exports.albumsEpic = albumsEpic;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9rZWlzdWtla2lkby9wcm9qZWN0cy9pdHVuZXNGZXRjaGVyL3NyYy9zdGF0ZXMvYWxidW1zL2VwaWMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7QUFBQTs7QUFDQTs7QUFFTyxJQUFNLFVBQVUsR0FBRyxtQ0FDeEIsZ0JBRHdCLENBQW5CIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgY29tYmluZUVwaWNzIH0gZnJvbSAncmVkdXgtb2JzZXJ2YWJsZSc7XG5pbXBvcnQgeyBmZXRjaEVwaWMgfSBmcm9tICcuL2ZldGNoJztcblxuZXhwb3J0IGNvbnN0IGFsYnVtc0VwaWMgPSBjb21iaW5lRXBpY3MoXG4gIGZldGNoRXBpY1xuKTtcbiJdfQ==

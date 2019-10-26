@@ -1,0 +1,25 @@
+361747ae6fa1e589befc164d63afd730
+"use strict";var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");Object.defineProperty(exports, "__esModule", { value: true });exports.createAnimatedSet = createAnimatedSet;var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));var _AnimatedNode = _interopRequireDefault(require("./AnimatedNode"));
+var _val = require("../val");
+var _AnimatedBlock = require("../core/AnimatedBlock");var
+
+AnimatedSet = function (_AnimatedNode) {(0, _inherits2.default)(AnimatedSet, _AnimatedNode);
+
+
+
+  function AnimatedSet(what, value) {var _this;(0, _classCallCheck2.default)(this, AnimatedSet);
+    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(AnimatedSet).call(this, { type: 'set', what: what.__nodeID, value: value.__nodeID }, [value]));
+    _this._what = what;
+    _this._value = value;return _this;
+  }(0, _createClass2.default)(AnimatedSet, [{ key: "__onEvaluate", value: function __onEvaluate()
+
+    {
+      var newValue = (0, _val.val)(this._value);
+      this._what._updateValue(newValue);
+      return newValue;
+    } }]);return AnimatedSet;}(_AnimatedNode.default);
+
+
+function createAnimatedSet(what, value) {
+  return new AnimatedSet(what, (0, _AnimatedBlock.adapt)(value));
+}

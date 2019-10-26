@@ -1,0 +1,27 @@
+4bbd6e865b926d70ca922c0a37d4d0f1
+
+
+
+
+
+
+
+
+
+
+'use strict';var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+
+
+var TurboModuleRegistry = _interopRequireWildcard(require("../TurboModule/TurboModuleRegistry"));var _default =
+
+
+
+
+
+
+
+
+
+
+
+TurboModuleRegistry.get('I18nManager');exports.default = _default;

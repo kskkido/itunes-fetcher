@@ -1,0 +1,3 @@
+eee678757030af25ebc0324760bb215b
+jest.mock('react-native-reanimated', function () {return (
+    'Reanimated');});

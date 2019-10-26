@@ -1,0 +1,231 @@
+3f59ca81764e08179b13b07ef136745e
+"use strict";var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));var _base = require("./base");
+
+
+
+
+
+
+
+
+
+
+var _AnimatedBezier = _interopRequireDefault(require("./core/AnimatedBezier"));var
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Easing = function () {function Easing() {(0, _classCallCheck2.default)(this, Easing);}(0, _createClass2.default)(Easing, null, [{ key: "linear", value: function linear(
+
+
+
+
+
+
+    t) {
+      return t;
+    } }, { key: "ease", value: function ease(
+
+
+
+
+
+
+
+    t) {
+      return new _AnimatedBezier.default(t, 0.42, 0, 1, 1);
+    } }, { key: "quad", value: function quad(
+
+
+
+
+
+
+
+    t) {
+      return (0, _base.multiply)(t, t);
+    } }, { key: "cubic", value: function cubic(
+
+
+
+
+
+
+
+    t) {
+      return (0, _base.multiply)(t, t, t);
+    } }, { key: "poly", value: function poly(
+
+
+
+
+
+
+
+    n) {
+      return function (t) {return (0, _base.pow)(t, n);};
+    } }, { key: "sin", value: function sin(
+
+
+
+
+
+
+    t) {
+      return (0, _base.sub)(1, (0, _base.cos)((0, _base.multiply)(t, Math.PI, 0.5)));
+    } }, { key: "circle", value: function circle(
+
+
+
+
+
+
+    t) {
+      return (0, _base.sub)(1, (0, _base.sqrt)((0, _base.sub)(1, (0, _base.multiply)(t, t))));
+    } }, { key: "exp", value: function exp(
+
+
+
+
+
+
+    t) {
+      return (0, _base.pow)(2, (0, _base.multiply)(10, (0, _base.sub)(t, 1)));
+    } }, { key: "elastic", value: function elastic()
+
+
+
+
+
+
+
+
+
+
+
+    {var bounciness = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+      var p = bounciness * Math.PI;
+      return function (t) {return (
+          (0, _base.sub)(
+          1,
+          (0, _base.multiply)((0, _base.pow)((0, _base.cos)((0, _base.multiply)(t, Math.PI, 0.5)), 3), (0, _base.cos)((0, _base.multiply)(t, p)))));};
+
+    } }, { key: "back", value: function back(
+
+
+
+
+
+
+
+
+
+    s) {
+      if (s === undefined) {
+        s = 1.70158;
+      }
+      return function (t) {return (0, _base.multiply)(t, t, (0, _base.sub)((0, _base.multiply)((0, _base.add)(s, 1), t), s));};
+    } }, { key: "bounce", value: function bounce(
+
+
+
+
+
+
+    t) {
+      var sq = function sq(v) {return (0, _base.multiply)(7.5625, v, v);};
+      return (0, _base.cond)(
+      (0, _base.lessThan)(t, 1 / 2.75),
+      sq(t),
+      (0, _base.cond)(
+      (0, _base.lessThan)(t, 2 / 2.75),
+      (0, _base.add)(0.75, sq((0, _base.sub)(t, 1.5 / 2.75))),
+      (0, _base.cond)(
+      (0, _base.lessThan)(t, 2.5 / 2.76),
+      (0, _base.add)(0.9375, sq((0, _base.sub)(t, 2.25 / 2.75))),
+      (0, _base.add)(0.984375, sq((0, _base.sub)(t, 2.625 / 2.75))))));
+
+
+
+    } }, { key: "bezier", value: function bezier(
+
+
+
+
+
+
+
+
+    x1, y1, x2, y2) {
+      return function (t) {return new _AnimatedBezier.default(t, x1, y1, x2, y2);};
+    } }, { key: "in", value: function _in(
+
+
+
+
+    easing) {
+      return easing;
+    } }, { key: "out", value: function out(
+
+
+
+
+    easing) {
+      return function (t) {return (0, _base.sub)(1, easing((0, _base.sub)(1, t)));};
+    } }, { key: "inOut", value: function inOut(
+
+
+
+
+
+
+    easing) {
+      return function (t) {return (
+          (0, _base.cond)(
+          (0, _base.lessThan)(t, 0.5),
+          (0, _base.divide)(easing((0, _base.multiply)(t, 2)), 2),
+          (0, _base.sub)(1, (0, _base.divide)(easing((0, _base.multiply)((0, _base.sub)(1, t), 2)), 2))));};
+
+    } }]);return Easing;}();exports.default = Easing;

@@ -1,0 +1,1 @@
+{"version":3,"sources":["/Users/keisukekido/projects/itunesFetcher/src/states/albums/epic/index.ts"],"names":[],"mappings":";;;;;AAAA;;AACA;;AAEO,IAAM,UAAU,GAAG,mCACxB,gBADwB,CAAnB","sourcesContent":["import { combineEpics } from 'redux-observable';\nimport { fetchEpic } from './fetch';\n\nexport const albumsEpic = combineEpics(\n  fetchEpic\n);\n"]}

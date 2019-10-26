@@ -1,0 +1,84 @@
+4bbdfa7f1184e5ac4771bb2768e578f1
+"use strict";var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");Object.defineProperty(exports, "__esModule", { value: true });exports.createAnimatedOperator = createAnimatedOperator;var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));var _AnimatedNode = _interopRequireDefault(require("./AnimatedNode"));
+var _val = require("../val");
+
+var _invariant = _interopRequireDefault(require("fbjs/lib/invariant"));
+var _AnimatedBlock = require("../core/AnimatedBlock");
+
+function reduce(fn) {
+  return function (input) {return input.reduce(function (a, b) {return fn((0, _val.val)(a), (0, _val.val)(b));});};
+}
+
+function reduceFrom(fn, initialValue) {
+  return function (input) {return input.reduce(function (a, b) {return fn((0, _val.val)(a), (0, _val.val)(b));}, initialValue);};
+}
+
+function infix(fn) {
+  return function (input) {return fn((0, _val.val)(input[0]), (0, _val.val)(input[1]));};
+}
+
+function single(fn) {
+  return function (input) {return fn((0, _val.val)(input[0]));};
+}
+
+var OPERATIONS = {
+
+  add: reduce(function (a, b) {return a + b;}),
+  sub: reduce(function (a, b) {return a - b;}),
+  multiply: reduce(function (a, b) {return a * b;}),
+  divide: reduce(function (a, b) {return a / b;}),
+  pow: reduce(function (a, b) {return Math.pow(a, b);}),
+  modulo: reduce(function (a, b) {return (a % b + b) % b;}),
+  sqrt: single(function (a) {return Math.sqrt(a);}),
+  log: single(function (a) {return Math.log(a);}),
+  sin: single(function (a) {return Math.sin(a);}),
+  cos: single(function (a) {return Math.cos(a);}),
+  tan: single(function (a) {return Math.tan(a);}),
+  acos: single(function (a) {return Math.acos(a);}),
+  asin: single(function (a) {return Math.asin(a);}),
+  atan: single(function (a) {return Math.atan(a);}),
+  exp: single(function (a) {return Math.exp(a);}),
+
+
+  and: reduceFrom(function (a, b) {return a && b;}, true),
+  or: reduceFrom(function (a, b) {return a || b;}, false),
+  not: single(function (a) {return !a;}),
+  defined: single(function (a) {return a !== null && a !== undefined && !isNaN(a);}),
+
+
+  lessThan: infix(function (a, b) {return a < b;}),
+
+  eq: infix(function (a, b) {return a == b;}),
+  greaterThan: infix(function (a, b) {return a > b;}),
+  lessOrEq: infix(function (a, b) {return a <= b;}),
+  greaterOrEq: infix(function (a, b) {return a >= b;}),
+
+  neq: infix(function (a, b) {return a != b;}) };var
+
+
+AnimatedOperator = function (_AnimatedNode) {(0, _inherits2.default)(AnimatedOperator, _AnimatedNode);
+
+
+
+
+  function AnimatedOperator(operator, input) {var _this;(0, _classCallCheck2.default)(this, AnimatedOperator);
+    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(AnimatedOperator).call(this,
+    { type: 'op', op: operator, input: input.map(function (n) {return n.__nodeID;}) },
+    input));
+
+    _this._op = operator;
+    _this._input = input;return _this;
+  }(0, _createClass2.default)(AnimatedOperator, [{ key: "__onEvaluate", value: function __onEvaluate()
+
+    {
+      if (!this._operation) {
+        this._operation = OPERATIONS[this._op];
+        (0, _invariant.default)(this._operation, "Illegal operator '%s'", this._op);
+      }
+      return this._operation(this._input);
+    } }]);return AnimatedOperator;}(_AnimatedNode.default);
+
+
+function createAnimatedOperator(name) {
+  return function () {for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {args[_key] = arguments[_key];}return new AnimatedOperator(name, args.map(_AnimatedBlock.adapt));};
+}

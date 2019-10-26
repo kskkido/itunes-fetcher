@@ -1,0 +1,19 @@
+548b6b0cc712dd7f42a54a06f23d0f33
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.composeRequestStatuses = void 0;
+
+var R = _interopRequireWildcard(require("ramda"));
+
+var composeRequestStatuses = R.cond([[R.any(function (status) {
+  return status === 'unsent';
+}), R.always('unsent')], [R.any(function (status) {
+  return status === 'loading';
+}), R.always('loading')], [R.any(function (status) {
+  return status === 'error';
+}), R.always('error')], [R.T, R.always('success')]]);
+exports.composeRequestStatuses = composeRequestStatuses;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9rZWlzdWtla2lkby9wcm9qZWN0cy9pdHVuZXNGZXRjaGVyL3NyYy91dGlscy9yZXF1ZXN0L3N0YXR1cy9pbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7O0FBQUE7O0FBR08sSUFBTSxzQkFBc0IsR0FBaUQsQ0FBQyxDQUFDLElBQUYsQ0FBTyxDQUN6RixDQUFDLENBQUMsQ0FBQyxHQUFGLENBQU0sVUFBQSxNQUFNO0FBQUEsU0FBSSxNQUFNLEtBQUssUUFBZjtBQUFBLENBQVosQ0FBRCxFQUF1QyxDQUFDLENBQUMsTUFBRixDQUFTLFFBQVQsQ0FBdkMsQ0FEeUYsRUFFekYsQ0FBQyxDQUFDLENBQUMsR0FBRixDQUFNLFVBQUEsTUFBTTtBQUFBLFNBQUksTUFBTSxLQUFLLFNBQWY7QUFBQSxDQUFaLENBQUQsRUFBd0MsQ0FBQyxDQUFDLE1BQUYsQ0FBUyxTQUFULENBQXhDLENBRnlGLEVBR3pGLENBQUMsQ0FBQyxDQUFDLEdBQUYsQ0FBTSxVQUFBLE1BQU07QUFBQSxTQUFJLE1BQU0sS0FBSyxPQUFmO0FBQUEsQ0FBWixDQUFELEVBQXNDLENBQUMsQ0FBQyxNQUFGLENBQVMsT0FBVCxDQUF0QyxDQUh5RixFQUl6RixDQUFDLENBQUMsQ0FBQyxDQUFILEVBQU0sQ0FBQyxDQUFDLE1BQUYsQ0FBUyxTQUFULENBQU4sQ0FKeUYsQ0FBUCxDQUE3RSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAqIGFzIFIgZnJvbSAncmFtZGEnO1xuaW1wb3J0IHsgUmVxdWVzdFN0YXR1cyB9IGZyb20gJ3R5cGVzL3JlcXVlc3QnO1xuXG5leHBvcnQgY29uc3QgY29tcG9zZVJlcXVlc3RTdGF0dXNlczogKHN0YXR1c2VzOiBSZXF1ZXN0U3RhdHVzW10pID0+IFJlcXVlc3RTdGF0dXMgPSBSLmNvbmQoW1xuICBbUi5hbnkoc3RhdHVzID0+IHN0YXR1cyA9PT0gJ3Vuc2VudCcpLCBSLmFsd2F5cygndW5zZW50JyldLFxuICBbUi5hbnkoc3RhdHVzID0+IHN0YXR1cyA9PT0gJ2xvYWRpbmcnKSwgUi5hbHdheXMoJ2xvYWRpbmcnKV0sXG4gIFtSLmFueShzdGF0dXMgPT4gc3RhdHVzID09PSAnZXJyb3InKSwgUi5hbHdheXMoJ2Vycm9yJyldLFxuICBbUi5ULCBSLmFsd2F5cygnc3VjY2VzcycpXSxcbl0pO1xuIl19

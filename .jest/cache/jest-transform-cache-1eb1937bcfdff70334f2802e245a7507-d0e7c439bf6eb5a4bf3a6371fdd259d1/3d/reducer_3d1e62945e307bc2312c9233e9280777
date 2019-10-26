@@ -1,0 +1,17 @@
+b7c139135f78acd0fab4591847904ed4
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.batchedActionsReducer = void 0;
+
+var _reducer = require("../../../states/root/reducer");
+
+var _action = require("./action");
+
+var batchedActionsReducer = function batchedActionsReducer(state) {
+  var actions = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [_action.noop];
+  return actions.reduce(_reducer.rootReducer, state);
+};
+
+exports.batchedActionsReducer = batchedActionsReducer;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9rZWlzdWtla2lkby9wcm9qZWN0cy9pdHVuZXNGZXRjaGVyL3NyYy9fdGVzdHMvdXRpbHMvc3RhdGVzL3JlZHVjZXIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7QUFDQTs7QUFDQTs7QUFHTyxJQUFNLHFCQUFxQixHQUFHLFNBQXhCLHFCQUF3QixDQUNuQyxLQURtQztBQUFBLE1BRW5DLE9BRm1DLHVFQUVmLENBQUMsWUFBRCxDQUZlO0FBQUEsU0FJbkMsT0FBTyxDQUFDLE1BQVIsQ0FDRSxvQkFERixFQUVFLEtBRkYsQ0FKbUM7QUFBQSxDQUE5QiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEFjdGlvbiB9IGZyb20gJ3JlZHV4JztcbmltcG9ydCB7IHJvb3RSZWR1Y2VyLCBSb290U3RhdGUgfSBmcm9tICdzdGF0ZXMvcm9vdC9yZWR1Y2VyJztcbmltcG9ydCB7IG5vb3AgfSBmcm9tICcuL2FjdGlvbic7XG5cbi8vIFRPRE8gZml4IHR5cGVzXG5leHBvcnQgY29uc3QgYmF0Y2hlZEFjdGlvbnNSZWR1Y2VyID0gKFxuICBzdGF0ZTogUm9vdFN0YXRlIHwge30sXG4gIGFjdGlvbnM6IEFjdGlvbltdID0gW25vb3BdXG4pID0+IChcbiAgYWN0aW9ucy5yZWR1Y2UoXG4gICAgcm9vdFJlZHVjZXIsXG4gICAgc3RhdGUgYXMgUm9vdFN0YXRlXG4gICkgYXMgUm9vdFN0YXRlXG4pO1xuIl19

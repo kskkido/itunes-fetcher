@@ -1,0 +1,9 @@
+import { StyleSheet } from 'react-native';
+export default StyleSheet.create({
+    base: {
+        width: '100%',
+        borderBottomColor: '#ddd',
+        borderBottomWidth: 1,
+    },
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJmaWxlIjoiL1VzZXJzL2tlaXN1a2VraWRvL3Byb2plY3RzL2l0dW5lc0ZldGNoZXIvc3JjL2NvbXBvbmVudHMvU2hhcmVkL0RpdmlkZXJIb3Jpem9udGFsL0xpbmUvc3R5bGVzLnRzIiwibWFwcGluZ3MiOiJBQUFBLE9BQU8sRUFBRSxVQUFVLEVBQUUsTUFBTSxjQUFjLENBQUM7QUFFMUMsZUFBZSxVQUFVLENBQUMsTUFBTSxDQUFDO0lBQy9CLElBQUksRUFBRTtRQUNKLEtBQUssRUFBRSxNQUFNO1FBQ2IsaUJBQWlCLEVBQUUsTUFBTTtRQUN6QixpQkFBaUIsRUFBRSxDQUFDO0tBQ3JCO0NBQ0YsQ0FBQyxDQUFDIiwibmFtZXMiOltdLCJzb3VyY2VzIjpbIi9Vc2Vycy9rZWlzdWtla2lkby9wcm9qZWN0cy9pdHVuZXNGZXRjaGVyL3NyYy9jb21wb25lbnRzL1NoYXJlZC9EaXZpZGVySG9yaXpvbnRhbC9MaW5lL3N0eWxlcy50cyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBTdHlsZVNoZWV0IH0gZnJvbSAncmVhY3QtbmF0aXZlJztcblxuZXhwb3J0IGRlZmF1bHQgU3R5bGVTaGVldC5jcmVhdGUoe1xuICBiYXNlOiB7XG4gICAgd2lkdGg6ICcxMDAlJyxcbiAgICBib3JkZXJCb3R0b21Db2xvcjogJyNkZGQnLFxuICAgIGJvcmRlckJvdHRvbVdpZHRoOiAxLFxuICB9LFxufSk7XG4iXSwidmVyc2lvbiI6M30=

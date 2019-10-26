@@ -1,0 +1,33 @@
+caf1b95c3dd039c8957813e02751f429
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _reactNative = require("react-native");
+
+var _font = require("../../../styles/theme/font");
+
+var _default = _reactNative.StyleSheet.create({
+  base: {
+    marginBottom: 0,
+    fontWeight: '600'
+  },
+  left: {
+    textAlign: 'left'
+  },
+  right: {
+    textAlign: 'right'
+  },
+  center: {
+    textAlign: 'center'
+  },
+  1: _font.size.large,
+  2: _font.size.medium,
+  3: _font.size.small,
+  4: _font.size.tiny,
+  5: _font.size.mini
+});
+
+exports.default = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9rZWlzdWtla2lkby9wcm9qZWN0cy9pdHVuZXNGZXRjaGVyL3NyYy9jb21wb25lbnRzL1NoYXJlZC9IZWFkaW5nL3N0eWxlcy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7OztBQUFBOztBQUNBOztlQUVlLHdCQUFXLE1BQVgsQ0FBa0I7QUFDL0IsRUFBQSxJQUFJLEVBQUU7QUFDSixJQUFBLFlBQVksRUFBRSxDQURWO0FBRUosSUFBQSxVQUFVLEVBQUU7QUFGUixHQUR5QjtBQUsvQixFQUFBLElBQUksRUFBRTtBQUNKLElBQUEsU0FBUyxFQUFFO0FBRFAsR0FMeUI7QUFRL0IsRUFBQSxLQUFLLEVBQUU7QUFDTCxJQUFBLFNBQVMsRUFBRTtBQUROLEdBUndCO0FBVy9CLEVBQUEsTUFBTSxFQUFFO0FBQ04sSUFBQSxTQUFTLEVBQUU7QUFETCxHQVh1QjtBQWMvQixLQUFHLFdBQUssS0FkdUI7QUFlL0IsS0FBRyxXQUFLLE1BZnVCO0FBZ0IvQixLQUFHLFdBQUssS0FoQnVCO0FBaUIvQixLQUFHLFdBQUssSUFqQnVCO0FBa0IvQixLQUFHLFdBQUs7QUFsQnVCLENBQWxCLEMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBTdHlsZVNoZWV0IH0gZnJvbSAncmVhY3QtbmF0aXZlJztcbmltcG9ydCB7IHNpemUgfSBmcm9tICdzdHlsZXMvdGhlbWUvZm9udCc7XG5cbmV4cG9ydCBkZWZhdWx0IFN0eWxlU2hlZXQuY3JlYXRlKHtcbiAgYmFzZToge1xuICAgIG1hcmdpbkJvdHRvbTogMCxcbiAgICBmb250V2VpZ2h0OiAnNjAwJyxcbiAgfSxcbiAgbGVmdDoge1xuICAgIHRleHRBbGlnbjogJ2xlZnQnLFxuICB9LFxuICByaWdodDoge1xuICAgIHRleHRBbGlnbjogJ3JpZ2h0JyxcbiAgfSxcbiAgY2VudGVyOiB7XG4gICAgdGV4dEFsaWduOiAnY2VudGVyJyxcbiAgfSxcbiAgMTogc2l6ZS5sYXJnZSxcbiAgMjogc2l6ZS5tZWRpdW0sXG4gIDM6IHNpemUuc21hbGwsXG4gIDQ6IHNpemUudGlueSxcbiAgNTogc2l6ZS5taW5pLFxufSk7XG4iXX0=

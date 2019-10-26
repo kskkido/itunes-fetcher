@@ -1,0 +1,23 @@
+a95458e35f4b8a26bd1cc60e19e18e6b
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _Feather = _interopRequireDefault(require("react-native-vector-icons/Feather"));
+
+var Search = function Search(_ref) {
+  var size = _ref.size;
+  return _react.default.createElement(_Feather.default, {
+    name: "search",
+    size: size
+  });
+};
+
+var _default = Search;
+exports.default = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9rZWlzdWtla2lkby9wcm9qZWN0cy9pdHVuZXNGZXRjaGVyL3NyYy9jb21wb25lbnRzL1NoYXJlZC9JY29ucy9TZWFyY2gvaW5kZXgudHN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFBQTs7QUFDQTs7QUFNQSxJQUFNLE1BQU0sR0FBMkIsU0FBakMsTUFBaUM7QUFBQSxNQUNyQyxJQURxQyxRQUNyQyxJQURxQztBQUFBLFNBR3JDLGVBQUEsYUFBQSxDQUFDLGdCQUFELEVBQUs7QUFDSCxJQUFBLElBQUksRUFBQyxRQURGO0FBRUgsSUFBQSxJQUFJLEVBQUU7QUFGSCxHQUFMLENBSHFDO0FBQUEsQ0FBdkM7O2VBU2UsTSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQgSWNvbiBmcm9tICdyZWFjdC1uYXRpdmUtdmVjdG9yLWljb25zL0ZlYXRoZXInO1xuXG50eXBlIFNlYXJjaFByb3BzID0ge1xuICBzaXplOiBudW1iZXI7XG59O1xuXG5jb25zdCBTZWFyY2g6IFJlYWN0LlNGQzxTZWFyY2hQcm9wcz4gPSAoe1xuICBzaXplLFxufSkgPT4gKFxuICA8SWNvblxuICAgIG5hbWU9XCJzZWFyY2hcIlxuICAgIHNpemU9e3NpemV9XG4gIC8+XG4pO1xuXG5leHBvcnQgZGVmYXVsdCBTZWFyY2g7XG4iXX0=

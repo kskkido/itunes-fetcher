@@ -1,0 +1,123 @@
+f97efa904e0b07cd6ad5808f0b13f705
+"use strict";var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");Object.defineProperty(exports, "__esModule", { value: true });exports.default = interpolate;exports.Extrapolate = void 0;var _operators = require("../operators");
+
+
+
+
+
+
+
+
+var _AnimatedCond = require("../core/AnimatedCond");
+var _invariant = _interopRequireDefault(require("fbjs/lib/invariant"));
+var _AnimatedNode = _interopRequireDefault(require("../core/AnimatedNode"));
+
+function interpolateInternalSingle(value, inputRange, outputRange, offset) {
+  var inS = inputRange[offset];
+  var inE = inputRange[offset + 1];
+  var outS = outputRange[offset];
+  var outE = outputRange[offset + 1];
+  var progress = (0, _operators.divide)((0, _operators.sub)(value, inS), (0, _operators.sub)(inE, inS));
+  return (0, _operators.add)(outS, (0, _operators.multiply)(progress, (0, _operators.sub)(outE, outS)));
+}
+
+function interpolateInternal(value, inputRange, outputRange) {var offset = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 0;
+  if (inputRange.length - offset === 2) {
+    return interpolateInternalSingle(value, inputRange, outputRange, offset);
+  }
+  return (0, _AnimatedCond.createAnimatedCond)(
+  (0, _operators.lessThan)(value, inputRange[offset + 1]),
+  interpolateInternalSingle(value, inputRange, outputRange, offset),
+  interpolateInternal(value, inputRange, outputRange, offset + 1));
+
+}
+
+var Extrapolate = {
+  EXTEND: 'extend',
+  CLAMP: 'clamp',
+  IDENTITY: 'identity' };exports.Extrapolate = Extrapolate;
+
+
+function checkNonDecreasing(name, arr) {
+  for (var i = 1; i < arr.length; ++i) {
+
+    if (arr[i] instanceof _AnimatedNode.default || arr[i - 1] instanceof _AnimatedNode.default)
+    continue;
+    (0, _invariant.default)(
+    arr[i] >= arr[i - 1],
+    '%s must be monotonically non-decreasing. (%s)',
+    name,
+    arr);
+
+  }
+}
+
+function checkMinElements(name, arr) {
+  (0, _invariant.default)(
+  arr.length >= 2,
+  '%s must have at least 2 elements. (%s)',
+  name,
+  arr);
+
+}
+
+function checkValidNumbers(name, arr) {
+  for (var i = 0; i < arr.length; i++) {
+
+    if (arr[i] instanceof _AnimatedNode.default) continue;
+    (0, _invariant.default)(
+    Number.isFinite(arr[i]),
+    '%s cannot include %s. (%s)',
+    name,
+    arr[i],
+    arr);
+
+  }
+}
+
+function interpolate(value, config) {var
+
+  inputRange =
+
+
+
+
+  config.inputRange,outputRange = config.outputRange,_config$extrapolate = config.extrapolate,extrapolate = _config$extrapolate === void 0 ? Extrapolate.EXTEND : _config$extrapolate,extrapolateLeft = config.extrapolateLeft,extrapolateRight = config.extrapolateRight;
+  checkMinElements('inputRange', inputRange);
+  checkValidNumbers('inputRange', inputRange);
+  checkMinElements('outputRange', outputRange);
+  checkValidNumbers('outputRange', outputRange);
+  checkNonDecreasing('inputRange', inputRange);
+  (0, _invariant.default)(
+  inputRange.length === outputRange.length,
+  'inputRange and outputRange must be the same length.');
+
+
+  var left = extrapolateLeft || extrapolate;
+  var right = extrapolateRight || extrapolate;
+  var output = interpolateInternal(value, inputRange, outputRange);
+
+  if (left === Extrapolate.EXTEND) {
+  } else if (left === Extrapolate.CLAMP) {
+    output = (0, _AnimatedCond.createAnimatedCond)((0, _operators.lessThan)(value, inputRange[0]), outputRange[0], output);
+  } else if (left === Extrapolate.IDENTITY) {
+    output = (0, _AnimatedCond.createAnimatedCond)((0, _operators.lessThan)(value, inputRange[0]), value, output);
+  }
+
+  if (right === Extrapolate.EXTEND) {
+  } else if (right === Extrapolate.CLAMP) {
+    output = (0, _AnimatedCond.createAnimatedCond)(
+    (0, _operators.greaterThan)(value, inputRange[inputRange.length - 1]),
+    outputRange[outputRange.length - 1],
+    output);
+
+  } else if (right === Extrapolate.IDENTITY) {
+    output = (0, _AnimatedCond.createAnimatedCond)(
+    (0, _operators.greaterThan)(value, inputRange[inputRange.length - 1]),
+    value,
+    output);
+
+  }
+
+  return output;
+}

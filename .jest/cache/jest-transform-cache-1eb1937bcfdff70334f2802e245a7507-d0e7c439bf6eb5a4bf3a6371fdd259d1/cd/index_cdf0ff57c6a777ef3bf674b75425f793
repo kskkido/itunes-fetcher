@@ -1,0 +1,21 @@
+d110c3ed523a57779b4a0c409c2fac52
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.configureStore = void 0;
+
+var _redux = require("redux");
+
+var _reduxObservable = require("redux-observable");
+
+var _reducer = require("./root/reducer");
+
+var _epic = require("./root/epic");
+
+var configureStore = function configureStore() {
+  var initialState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  return (0, _redux.createStore)(_reducer.rootReducer, initialState, _redux.applyMiddleware.apply(void 0, [(0, _reduxObservable.createEpicMiddleware)(_epic.rootEpic)]));
+};
+
+exports.configureStore = configureStore;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9rZWlzdWtla2lkby9wcm9qZWN0cy9pdHVuZXNGZXRjaGVyL3NyYy9zdGF0ZXMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7QUFBQTs7QUFDQTs7QUFDQTs7QUFDQTs7QUFFTyxJQUFNLGNBQWMsR0FBRyxTQUFqQixjQUFpQjtBQUFBLE1BQUMsWUFBRCx1RUFBb0MsRUFBcEM7QUFBQSxTQUM1Qix3QkFDRSxvQkFERixFQUVFLFlBRkYsRUFHRSxxQ0FBbUIsQ0FDakIsMkNBQXFCLGNBQXJCLENBRGlCLENBQW5CLENBSEYsQ0FENEI7QUFBQSxDQUF2QiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGNyZWF0ZVN0b3JlLCBhcHBseU1pZGRsZXdhcmUgfSBmcm9tICdyZWR1eCc7XG5pbXBvcnQgeyBjcmVhdGVFcGljTWlkZGxld2FyZSB9IGZyb20gJ3JlZHV4LW9ic2VydmFibGUnO1xuaW1wb3J0IHsgcm9vdFJlZHVjZXIsIFJvb3RTdGF0ZSB9IGZyb20gJ3N0YXRlcy9yb290L3JlZHVjZXInO1xuaW1wb3J0IHsgcm9vdEVwaWMgfSBmcm9tICdzdGF0ZXMvcm9vdC9lcGljJztcblxuZXhwb3J0IGNvbnN0IGNvbmZpZ3VyZVN0b3JlID0gKGluaXRpYWxTdGF0ZTogUGFydGlhbDxSb290U3RhdGU+ID0ge30pID0+IChcbiAgY3JlYXRlU3RvcmUoXG4gICAgcm9vdFJlZHVjZXIsXG4gICAgaW5pdGlhbFN0YXRlLFxuICAgIGFwcGx5TWlkZGxld2FyZSguLi5bXG4gICAgICBjcmVhdGVFcGljTWlkZGxld2FyZShyb290RXBpYyksXG4gICAgXSlcbiAgKVxuKTtcbiJdfQ==
