@@ -1,0 +1,4 @@
+8319b90fcf3df58cf933f93b6db3a729
+"use strict";var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _RNGestureHandlerModule = _interopRequireDefault(require("./RNGestureHandlerModule"));var _default =
+
+_RNGestureHandlerModule.default.Direction;exports.default = _default;

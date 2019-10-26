@@ -1,0 +1,12 @@
+ea3a91be32bfaba147cb668fd46b05fe
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.isErrorWithResponse = void 0;
+
+var isErrorWithResponse = function isErrorWithResponse(error) {
+  return 'response' in error;
+};
+
+exports.isErrorWithResponse = isErrorWithResponse;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9rZWlzdWtla2lkby9wcm9qZWN0cy9pdHVuZXNGZXRjaGVyL3NyYy91dGlscy9yZXF1ZXN0L2Vycm9yL21hdGNoLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7O0FBRU8sSUFBTSxtQkFBbUIsR0FBRyxTQUF0QixtQkFBc0IsQ0FBQyxLQUFEO0FBQUEsU0FDakMsY0FBYyxLQURtQjtBQUFBLENBQTVCIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgUmVxdWVzdEVycm9yLCBFcnJvcldpdGhSZXNwb25zZSB9IGZyb20gJ3R5cGVzL3JlcXVlc3QnO1xuXG5leHBvcnQgY29uc3QgaXNFcnJvcldpdGhSZXNwb25zZSA9IChlcnJvcjogUmVxdWVzdEVycm9yKTogZXJyb3IgaXMgRXJyb3JXaXRoUmVzcG9uc2UgPT4gKFxuICAncmVzcG9uc2UnIGluIGVycm9yXG4pO1xuIl19

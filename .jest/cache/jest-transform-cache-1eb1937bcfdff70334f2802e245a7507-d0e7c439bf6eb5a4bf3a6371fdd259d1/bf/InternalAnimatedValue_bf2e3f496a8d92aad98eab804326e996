@@ -1,0 +1,75 @@
+4622999f25303634fda56e7d4122b124
+"use strict";var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));var _get2 = _interopRequireDefault(require("@babel/runtime/helpers/get"));var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));var _AnimatedNode = _interopRequireDefault(require("./AnimatedNode"));
+var _val = require("../val");
+var _ReanimatedModule = _interopRequireDefault(require("../ReanimatedModule"));
+
+function sanitizeValue(value) {
+  return value === null || value === undefined || typeof value === 'string' ?
+  value :
+  Number(value);
+}
+
+var CONSTANT_VALUES = new Map();
+
+function initializeConstantValues() {
+  if (CONSTANT_VALUES.size != 0) {
+    return;
+  }
+  [0, -1, 1, -2, 2].forEach(function (v) {return (
+      CONSTANT_VALUES.set(v, new InternalAnimatedValue(v, true)));});
+
+}var
+
+
+
+
+
+InternalAnimatedValue = function (_AnimatedNode) {(0, _inherits2.default)(InternalAnimatedValue, _AnimatedNode);(0, _createClass2.default)(InternalAnimatedValue, null, [{ key: "valueForConstant", value: function valueForConstant(
+    number) {
+      initializeConstantValues();
+      return (
+        CONSTANT_VALUES.get(number) || new InternalAnimatedValue(number, true));
+
+    } }]);
+
+  function InternalAnimatedValue(value) {var _this;var constant = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;(0, _classCallCheck2.default)(this, InternalAnimatedValue);
+    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(InternalAnimatedValue).call(this, { type: 'value', value: sanitizeValue(value) }));
+    _this._startingValue = _this._value = value;
+    _this._animation = null;
+    _this._constant = constant;return _this;
+  }(0, _createClass2.default)(InternalAnimatedValue, [{ key: "__detach", value: function __detach()
+
+    {var _this2 = this;
+      if (!this._constant) {
+        _ReanimatedModule.default.getValue(
+        this.__nodeID,
+        function (val) {return _this2.__nodeConfig.value = val;});
+
+      }
+      this.__detachAnimation(this._animation);
+      (0, _get2.default)((0, _getPrototypeOf2.default)(InternalAnimatedValue.prototype), "__detach", this).call(this);
+    } }, { key: "__detachAnimation", value: function __detachAnimation(
+
+    animation) {
+      animation && animation.__detach();
+      if (this._animation === animation) {
+        this._animation = null;
+      }
+    } }, { key: "__attachAnimation", value: function __attachAnimation(
+
+    animation) {
+      this.__detachAnimation(this._animation);
+      this._animation = animation;
+    } }, { key: "__onEvaluate", value: function __onEvaluate()
+
+    {
+      if (this.__inputNodes && this.__inputNodes.length) {
+        this.__inputNodes.forEach(_val.val);
+      }
+      return this._value + this._offset;
+    } }, { key: "_updateValue", value: function _updateValue(
+
+    value) {
+      this._value = value;
+      this.__forceUpdateCache(value);
+    } }]);return InternalAnimatedValue;}(_AnimatedNode.default);exports.default = InternalAnimatedValue;

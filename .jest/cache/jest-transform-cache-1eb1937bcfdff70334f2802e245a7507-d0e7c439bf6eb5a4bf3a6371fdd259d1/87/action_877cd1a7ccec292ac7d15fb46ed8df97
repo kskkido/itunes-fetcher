@@ -1,0 +1,11 @@
+f6f93d4e0ff925cec689b7a74d9651ac
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.noop = void 0;
+
+var _action = require("../../../states/utils/action");
+
+var noop = (0, _action.createActionCreator)('__noop__');
+exports.noop = noop;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9rZWlzdWtla2lkby9wcm9qZWN0cy9pdHVuZXNGZXRjaGVyL3NyYy9fdGVzdHMvdXRpbHMvc3RhdGVzL2FjdGlvbi50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7OztBQUFBOztBQUVPLElBQU0sSUFBSSxHQUFHLGlDQUFvQixVQUFwQixDQUFiIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgY3JlYXRlQWN0aW9uQ3JlYXRvciB9IGZyb20gJ3N0YXRlcy91dGlscy9hY3Rpb24nO1xuXG5leHBvcnQgY29uc3Qgbm9vcCA9IGNyZWF0ZUFjdGlvbkNyZWF0b3IoJ19fbm9vcF9fJyk7XG4iXX0=

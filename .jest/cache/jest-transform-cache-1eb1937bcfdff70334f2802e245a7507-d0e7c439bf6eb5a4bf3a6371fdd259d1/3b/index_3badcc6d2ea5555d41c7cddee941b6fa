@@ -1,0 +1,25 @@
+0d664b3b250172649192d92265b68b27
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
+
+var _search = _interopRequireDefault(require("../search"));
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+var _default = {
+  get: function get(params) {
+    return _search.default.get(_objectSpread({}, params, {
+      entity: 'album'
+    }));
+  }
+};
+exports.default = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9rZWlzdWtla2lkby9wcm9qZWN0cy9pdHVuZXNGZXRjaGVyL3NyYy9hcGkvYWxidW1zL2luZGV4LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7OztBQUFBOzs7Ozs7ZUFHZTtBQUNiLEVBQUEsR0FBRyxFQUFFLGFBQ0gsTUFERztBQUFBLFdBS0gsZ0JBQU8sR0FBUCxtQkFDSyxNQURMO0FBRUUsTUFBQSxNQUFNLEVBQUU7QUFGVixPQUxHO0FBQUE7QUFEUSxDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHNlYXJjaCBmcm9tICdhcGkvc2VhcmNoJztcbmltcG9ydCB7IEdldFBhcmFtcywgR2V0UGF5bG9hZCB9IGZyb20gJy4vdHlwZXMnO1xuXG5leHBvcnQgZGVmYXVsdCB7XG4gIGdldDogKFxuICAgIHBhcmFtczogR2V0UGFyYW1zXG4gICk6IFByb21pc2U8XG4gICAgR2V0UGF5bG9hZFxuICA+ID0+IChcbiAgICBzZWFyY2guZ2V0KHtcbiAgICAgIC4uLnBhcmFtcyxcbiAgICAgIGVudGl0eTogJ2FsYnVtJyxcbiAgICB9KVxuICApLFxufTtcbiJdfQ==

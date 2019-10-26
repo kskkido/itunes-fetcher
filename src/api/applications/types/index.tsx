@@ -17,7 +17,7 @@ export type Application = {
   country: string;
   currency: string;
   primaryGenreName: string;
+  trackId: number;
   trackName: string;
-  trackId: string;
   trackViewUrl: string;
 };

@@ -17,7 +17,7 @@ const AsyncContainer: React.SFC<AsyncContainerProps> = ({
   error = 'unexpected error',
 }) => (
   <React.Fragment>
-    <Render when={status === 'success'}>
+    <Render when={status === 'success' || status === 'unsent'}>
       {children}
     </Render>
     <Render when={status === 'loading'}>

@@ -1,0 +1,25 @@
+fa607f617b0711fdab23a036d262062c
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRedux = require("react-redux");
+
+var _states = require("../../../../states");
+
+var StoreProvider = function StoreProvider(_ref) {
+  var children = _ref.children,
+      state = _ref.state;
+  return _react.default.createElement(_reactRedux.Provider, {
+    store: (0, _states.configureStore)(state)
+  }, children);
+};
+
+var _default = StoreProvider;
+exports.default = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9rZWlzdWtla2lkby9wcm9qZWN0cy9pdHVuZXNGZXRjaGVyL3NyYy9fdGVzdHMvdXRpbHMvUHJvdmlkZXJzL1N0b3JlUHJvdmlkZXIvaW5kZXgudHN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFBQTs7QUFDQTs7QUFFQTs7QUFPQSxJQUFNLGFBQWEsR0FBa0MsU0FBL0MsYUFBK0M7QUFBQSxNQUNuRCxRQURtRCxRQUNuRCxRQURtRDtBQUFBLE1BRW5ELEtBRm1ELFFBRW5ELEtBRm1EO0FBQUEsU0FJbkQsZUFBQSxhQUFBLENBQUMsb0JBQUQsRUFBUztBQUFDLElBQUEsS0FBSyxFQUFFLDRCQUFlLEtBQWY7QUFBUixHQUFULEVBQ0csUUFESCxDQUptRDtBQUFBLENBQXJEOztlQVNlLGEiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnO1xuaW1wb3J0IHsgUHJvdmlkZXIgfSBmcm9tICdyZWFjdC1yZWR1eCc7XG5pbXBvcnQgeyBSb290U3RhdGUgfSBmcm9tICdzdGF0ZXMvcm9vdC9yZWR1Y2VyJztcbmltcG9ydCB7IGNvbmZpZ3VyZVN0b3JlIH0gZnJvbSAnc3RhdGVzJztcblxudHlwZSBTdG9yZVByb3ZpZGVyUHJvcHMgPSB7XG4gIGNoaWxkcmVuOiBSZWFjdC5SZWFjdE5vZGU7XG4gIHN0YXRlOiBQYXJ0aWFsPFJvb3RTdGF0ZT47XG59O1xuXG5jb25zdCBTdG9yZVByb3ZpZGVyOiBSZWFjdC5TRkM8U3RvcmVQcm92aWRlclByb3BzPiA9ICh7XG4gIGNoaWxkcmVuLFxuICBzdGF0ZSxcbn0pID0+IChcbiAgPFByb3ZpZGVyIHN0b3JlPXtjb25maWd1cmVTdG9yZShzdGF0ZSl9PlxuICAgIHtjaGlsZHJlbn1cbiAgPC9Qcm92aWRlcj5cbik7XG5cbmV4cG9ydCBkZWZhdWx0IFN0b3JlUHJvdmlkZXI7XG4iXX0=

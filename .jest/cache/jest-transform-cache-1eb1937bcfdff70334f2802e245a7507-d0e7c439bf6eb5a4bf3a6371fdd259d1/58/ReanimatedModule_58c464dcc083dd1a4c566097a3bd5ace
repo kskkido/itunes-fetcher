@@ -1,0 +1,6 @@
+54b6734d31a54d3f1709ca2d6bd40f9d
+"use strict";Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _reactNative = require("react-native");var
+
+ReanimatedModule = _reactNative.NativeModules.ReanimatedModule;var _default =
+
+ReanimatedModule;exports.default = _default;

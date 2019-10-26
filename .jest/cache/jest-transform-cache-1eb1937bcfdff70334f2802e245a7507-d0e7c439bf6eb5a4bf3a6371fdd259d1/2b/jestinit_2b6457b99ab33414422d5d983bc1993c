@@ -1,0 +1,7 @@
+bf82c53de7974fe49e584bf7a57e264b
+jest.mock('react-native-reanimated', function () {return (
+    'NativeReanimated');});
+
+
+jest.mock('react-native-screens', function () {return (
+    'NativeScreens');});

@@ -1,0 +1,3 @@
+096ec164a6746c3c5d261cf989e79f18
+jest.mock('react-native-vector-icons/Feather', function () {return (
+    'Icon');});

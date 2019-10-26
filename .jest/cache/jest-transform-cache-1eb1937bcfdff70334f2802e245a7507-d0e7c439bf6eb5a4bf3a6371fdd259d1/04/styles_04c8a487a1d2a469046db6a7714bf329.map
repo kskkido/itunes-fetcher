@@ -1,0 +1,1 @@
+{"version":3,"sources":["/Users/keisukekido/projects/itunesFetcher/src/components/Shared/Link/styles.ts"],"names":[],"mappings":";;;;;AAAA;;eAEe,wBAAW,MAAX,CAAkB;AAC/B,EAAA,IAAI,EAAE;AACJ,IAAA,UAAU,EAAE;AADR;AADyB,CAAlB,C","sourcesContent":["import { StyleSheet } from 'react-native';\n\nexport default StyleSheet.create({\n  base: {\n    fontWeight: '700',\n  },\n});\n"]}

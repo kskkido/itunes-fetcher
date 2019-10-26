@@ -1,0 +1,6 @@
+195413a7d68db984e3362cace6995c18
+"use strict";Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _reactNative = require("react-native");var
+
+RNGestureHandlerModule = _reactNative.NativeModules.RNGestureHandlerModule;var _default =
+
+RNGestureHandlerModule;exports.default = _default;

@@ -1,0 +1,8 @@
+4877b4b9d6902f86297cc0a5a3e743b0
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.ITUNES_SEARCH_API = void 0;
+var ITUNES_SEARCH_API = 'https://itunes.apple.com/search';
+exports.ITUNES_SEARCH_API = ITUNES_SEARCH_API;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9rZWlzdWtla2lkby9wcm9qZWN0cy9pdHVuZXNGZXRjaGVyL3NyYy9jb25zdGFudHMvdXJscy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7O0FBQU8sSUFBTSxpQkFBaUIsR0FBRyxpQ0FBMUIiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgY29uc3QgSVRVTkVTX1NFQVJDSF9BUEkgPSAnaHR0cHM6Ly9pdHVuZXMuYXBwbGUuY29tL3NlYXJjaCc7XG4iXX0=

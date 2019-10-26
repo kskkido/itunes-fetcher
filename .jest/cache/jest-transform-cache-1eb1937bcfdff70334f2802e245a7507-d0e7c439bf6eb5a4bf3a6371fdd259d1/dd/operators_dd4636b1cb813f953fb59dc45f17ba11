@@ -1,0 +1,31 @@
+ea3fe15c35995145282cc32bd3ea943b
+"use strict";Object.defineProperty(exports, "__esModule", { value: true });exports.atan = exports.asin = exports.acos = exports.tan = exports.not = exports.defined = exports.or = exports.and = exports.neq = exports.greaterOrEq = exports.lessOrEq = exports.greaterThan = exports.eq = exports.lessThan = exports.round = exports.exp = exports.cos = exports.sin = exports.log = exports.sqrt = exports.modulo = exports.pow = exports.divide = exports.multiply = exports.sub = exports.add = void 0;var _AnimatedOperator = require("./core/AnimatedOperator");
+
+var operator = _AnimatedOperator.createAnimatedOperator;
+
+var add = operator('add');exports.add = add;
+var sub = operator('sub');exports.sub = sub;
+var multiply = operator('multiply');exports.multiply = multiply;
+var divide = operator('divide');exports.divide = divide;
+var pow = operator('pow');exports.pow = pow;
+var modulo = operator('modulo');exports.modulo = modulo;
+var sqrt = operator('sqrt');exports.sqrt = sqrt;
+var log = operator('log');exports.log = log;
+var sin = operator('sin');exports.sin = sin;
+var cos = operator('cos');exports.cos = cos;
+var exp = operator('exp');exports.exp = exp;
+var round = operator('round');exports.round = round;
+var lessThan = operator('lessThan');exports.lessThan = lessThan;
+var eq = operator('eq');exports.eq = eq;
+var greaterThan = operator('greaterThan');exports.greaterThan = greaterThan;
+var lessOrEq = operator('lessOrEq');exports.lessOrEq = lessOrEq;
+var greaterOrEq = operator('greaterOrEq');exports.greaterOrEq = greaterOrEq;
+var neq = operator('neq');exports.neq = neq;
+var and = operator('and');exports.and = and;
+var or = operator('or');exports.or = or;
+var defined = operator('defined');exports.defined = defined;
+var not = operator('not');exports.not = not;
+var tan = operator('tan');exports.tan = tan;
+var acos = operator('acos');exports.acos = acos;
+var asin = operator('asin');exports.asin = asin;
+var atan = operator('atan');exports.atan = atan;

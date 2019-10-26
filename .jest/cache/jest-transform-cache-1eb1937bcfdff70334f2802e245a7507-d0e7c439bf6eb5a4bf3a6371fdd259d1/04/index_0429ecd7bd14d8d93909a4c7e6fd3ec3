@@ -1,0 +1,13 @@
+cef0a6980a2fd351be773b4b1affe508
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.applicationsEpic = void 0;
+
+var _reduxObservable = require("redux-observable");
+
+var _fetch = require("./fetch");
+
+var applicationsEpic = (0, _reduxObservable.combineEpics)(_fetch.fetchEpic);
+exports.applicationsEpic = applicationsEpic;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9rZWlzdWtla2lkby9wcm9qZWN0cy9pdHVuZXNGZXRjaGVyL3NyYy9zdGF0ZXMvYXBwbGljYXRpb25zL2VwaWMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7QUFBQTs7QUFDQTs7QUFFTyxJQUFNLGdCQUFnQixHQUFHLG1DQUM5QixnQkFEOEIsQ0FBekIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBjb21iaW5lRXBpY3MgfSBmcm9tICdyZWR1eC1vYnNlcnZhYmxlJztcbmltcG9ydCB7IGZldGNoRXBpYyB9IGZyb20gJy4vZmV0Y2gnO1xuXG5leHBvcnQgY29uc3QgYXBwbGljYXRpb25zRXBpYyA9IGNvbWJpbmVFcGljcyhcbiAgZmV0Y2hFcGljXG4pO1xuIl19
