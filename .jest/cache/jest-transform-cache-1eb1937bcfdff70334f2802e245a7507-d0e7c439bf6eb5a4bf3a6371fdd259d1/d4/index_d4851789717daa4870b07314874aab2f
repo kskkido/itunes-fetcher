@@ -1,0 +1,41 @@
+9e9a2a5e4ddb454e998f449a2768522f
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _navigations = require("../../../../../../routes/navigations");
+
+var _Link = _interopRequireDefault(require("../../../../../Shared/Link"));
+
+var _Heading = _interopRequireDefault(require("../../../../../Shared/Heading"));
+
+var _Section = _interopRequireDefault(require("../../../../../Shared/Section"));
+
+var _SectionHeader = _interopRequireDefault(require("../../../../../Shared/SectionHeader"));
+
+var _ListColumn = _interopRequireDefault(require("../../../../../Shared/ListColumn"));
+
+var _AlbumCard = _interopRequireDefault(require("../../../../../../containers/Screens/Search/Parts/Results/AlbumCard"));
+
+var Albums = function Albums(_ref) {
+  var ids = _ref.ids;
+  return _react.default.createElement(_Section.default, null, _react.default.createElement(_SectionHeader.default, null, _react.default.createElement(_Heading.default, {
+    level: 3
+  }, "Albums"), _react.default.createElement(_Link.default, {
+    to: _navigations.NAVIGATION_SEARCH_ALBUMS.name
+  }, "See All...")), _react.default.createElement(_ListColumn.default, null, ids.map(function (id) {
+    return _react.default.createElement(_AlbumCard.default, {
+      key: id,
+      id: id
+    });
+  })));
+};
+
+var _default = Albums;
+exports.default = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9rZWlzdWtla2lkby9wcm9qZWN0cy9pdHVuZXNGZXRjaGVyL3NyYy9jb21wb25lbnRzL1NjcmVlbnMvU2VhcmNoL1BhcnRzL1Jlc3VsdHMvQWxidW1zL2luZGV4LnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7O0FBQUE7O0FBQ0E7O0FBQ0E7O0FBQ0E7O0FBQ0E7O0FBQ0E7O0FBQ0E7O0FBQ0E7O0FBTUEsSUFBTSxNQUFNLEdBQTJCLFNBQWpDLE1BQWlDO0FBQUEsTUFDckMsR0FEcUMsUUFDckMsR0FEcUM7QUFBQSxTQUdyQyxlQUFBLGFBQUEsQ0FBQyxnQkFBRCxFQUFRLElBQVIsRUFDRSxlQUFBLGFBQUEsQ0FBQyxzQkFBRCxFQUFjLElBQWQsRUFDRSxlQUFBLGFBQUEsQ0FBQyxnQkFBRCxFQUFRO0FBQUMsSUFBQSxLQUFLLEVBQUU7QUFBUixHQUFSLEVBQWlCLFFBQWpCLENBREYsRUFJRSxlQUFBLGFBQUEsQ0FBQyxhQUFELEVBQUs7QUFBQyxJQUFBLEVBQUUsRUFBRSxzQ0FBeUI7QUFBOUIsR0FBTCxFQUF1QyxZQUF2QyxDQUpGLENBREYsRUFTRSxlQUFBLGFBQUEsQ0FBQyxtQkFBRCxFQUFXLElBQVgsRUFDRyxHQUFHLENBQUMsR0FBSixDQUFRLFVBQUEsRUFBRTtBQUFBLFdBQUksZUFBQSxhQUFBLENBQUMsa0JBQUQsRUFBVTtBQUFDLE1BQUEsR0FBRyxFQUFFLEVBQU47QUFBVSxNQUFBLEVBQUUsRUFBRTtBQUFkLEtBQVYsQ0FBSjtBQUFBLEdBQVYsQ0FESCxDQVRGLENBSHFDO0FBQUEsQ0FBdkM7O2VBa0JlLE0iLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnO1xuaW1wb3J0IHsgTkFWSUdBVElPTl9TRUFSQ0hfQUxCVU1TIH0gZnJvbSAncm91dGVzL25hdmlnYXRpb25zJztcbmltcG9ydCBMaW5rIGZyb20gJ2NvbXBvbmVudHMvU2hhcmVkL0xpbmsnO1xuaW1wb3J0IEhlYWRpbmcgZnJvbSAnY29tcG9uZW50cy9TaGFyZWQvSGVhZGluZyc7XG5pbXBvcnQgU2VjdGlvbiBmcm9tICdjb21wb25lbnRzL1NoYXJlZC9TZWN0aW9uJztcbmltcG9ydCBTZWN0aW9uSGVhZGVyIGZyb20gJ2NvbXBvbmVudHMvU2hhcmVkL1NlY3Rpb25IZWFkZXInO1xuaW1wb3J0IExpc3RDb2x1bW4gZnJvbSAnY29tcG9uZW50cy9TaGFyZWQvTGlzdENvbHVtbic7XG5pbXBvcnQgQWxidW1DYXJkIGZyb20gJ2NvbnRhaW5lcnMvU2NyZWVucy9TZWFyY2gvUGFydHMvUmVzdWx0cy9BbGJ1bUNhcmQnO1xuXG50eXBlIEFsYnVtc1Byb3BzID0ge1xuICBpZHM6IHN0cmluZ1tdO1xufTtcblxuY29uc3QgQWxidW1zOiBSZWFjdC5TRkM8QWxidW1zUHJvcHM+ID0gKHtcbiAgaWRzLFxufSkgPT4gKFxuICA8U2VjdGlvbj5cbiAgICA8U2VjdGlvbkhlYWRlcj5cbiAgICAgIDxIZWFkaW5nIGxldmVsPXszfT5cbiAgICAgICAgQWxidW1zXG4gICAgICA8L0hlYWRpbmc+XG4gICAgICA8TGluayB0bz17TkFWSUdBVElPTl9TRUFSQ0hfQUxCVU1TLm5hbWV9PlxuICAgICAgICBTZWUgQWxsLi4uXG4gICAgICA8L0xpbms+XG4gICAgPC9TZWN0aW9uSGVhZGVyPlxuICAgIDxMaXN0Q29sdW1uPlxuICAgICAge2lkcy5tYXAoaWQgPT4gPEFsYnVtQ2FyZCBrZXk9e2lkfSBpZD17aWR9IC8+KX1cbiAgICA8L0xpc3RDb2x1bW4+XG4gIDwvU2VjdGlvbj5cbik7XG5cbmV4cG9ydCBkZWZhdWx0IEFsYnVtcztcbiJdfQ==

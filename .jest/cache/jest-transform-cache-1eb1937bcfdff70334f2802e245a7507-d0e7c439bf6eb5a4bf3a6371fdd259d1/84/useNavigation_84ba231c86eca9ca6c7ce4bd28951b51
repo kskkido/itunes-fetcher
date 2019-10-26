@@ -1,0 +1,17 @@
+51f9c59cbba93fd3b20757e290ea072d
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = require("react");
+
+var _reactNavigation = require("react-navigation");
+
+var useNavigation = function useNavigation() {
+  return (0, _react.useContext)(_reactNavigation.NavigationContext);
+};
+
+var _default = useNavigation;
+exports.default = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9rZWlzdWtla2lkby9wcm9qZWN0cy9pdHVuZXNGZXRjaGVyL3NyYy9ob29rcy91c2VOYXZpZ2F0aW9uLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7O0FBQUE7O0FBQ0E7O0FBRUEsSUFBTSxhQUFhLEdBQUcsU0FBaEIsYUFBZ0I7QUFBQSxTQUNwQix1QkFBVyxrQ0FBWCxDQURvQjtBQUFBLENBQXRCOztlQUllLGEiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyB1c2VDb250ZXh0IH0gZnJvbSAncmVhY3QnO1xuaW1wb3J0IHsgTmF2aWdhdGlvbkNvbnRleHQgfSBmcm9tICdyZWFjdC1uYXZpZ2F0aW9uJztcblxuY29uc3QgdXNlTmF2aWdhdGlvbiA9ICgpID0+IChcbiAgdXNlQ29udGV4dChOYXZpZ2F0aW9uQ29udGV4dClcbik7XG5cbmV4cG9ydCBkZWZhdWx0IHVzZU5hdmlnYXRpb247XG4iXX0=
